@@ -6,9 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import com.example.madcampweek1.SubActivity
 import com.example.madcampweek1.databinding.FragmentDashboardBinding
 
@@ -26,12 +24,44 @@ class DashboardFragment : Fragment() {
         val root: View = binding.root
 
         // Accessing views using binding
-        val imageViewA: ImageView = binding.imageViewA
+        val imageViewList = listOf(
+            binding.imageViewA,
+            binding.imageViewB,
+            binding.imageViewC,
+            binding.imageViewD,
+            binding.imageViewE,
+            binding.imageViewF,
+            binding.imageViewG,
+            binding.imageViewH,
+            binding.imageViewI,
+            binding.imageViewDog,
+            binding.imageViewAA,
+            binding.imageViewBB,
+            binding.imageViewCC,
+            binding.imageViewDD,
+            binding.imageViewEE,
+            binding.imageViewFF,
+            binding.imageViewGG,
+            binding.imageViewHH,
+            binding.imageViewII,
+            binding.imageViewDogDog
 
-        // Set OnClickListener for the ImageView
-        imageViewA.setOnClickListener {
+
+            // Add additional ImageViews here if needed
+        )
+
+        // Set OnClickListener for all ImageViews using a loop
+        val imageClickListener = View.OnClickListener { view:View->
             val intent = Intent(requireActivity(), SubActivity::class.java)
-            startActivity(intent)
+            val index = imageViewList.indexOf(view)
+
+            if (index != -1) {
+                intent.putExtra("clicked_image_index", index)
+                startActivity(intent)
+            }
+        }
+        imageViewList.forEach { imageView ->
+            imageView.setOnClickListener(imageClickListener)
         }
 
         return root
@@ -42,4 +72,3 @@ class DashboardFragment : Fragment() {
         _binding = null
     }
 }
-
