@@ -1,0 +1,42 @@
+[
+  {
+    "name" : "길동이",
+    "phoneNumber" : "010-1234-5678",
+    "relationship" : "친구"
+  },
+  {
+    "name" : "동석이",
+    "phoneNumber" : "010-2323-4545",
+    "relationship" : "가족"
+  },
+  {
+    "name" : "순신이",
+    "phoneNumber" : "010-8765-4321",
+    "relationship" : "친구"
+  },
+  {
+    "name" : "엄마",
+    "phoneNumber" : "010-0000-0001",
+    "relationship" : "가족"
+  },
+  {
+    "name" : "아빠",
+    "phoneNumber" : "010-0000-0002",
+    "relationship" : "가족"
+  },
+  {
+    "name" : "동생",
+    "phoneNumber" : "010-0000-0003",
+    "relationship" : "가족"
+  },
+  {
+    "name" : "개",
+    "phoneNumber" : "010-0000-0002",
+    "relationship" : "가족"
+  },
+  {
+    "name" : "고양이",
+    "phoneNumber" : "010-0000-0003",
+    "relationship" : "가족"
+  }
+]
