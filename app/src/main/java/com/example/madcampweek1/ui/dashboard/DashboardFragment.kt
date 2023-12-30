@@ -34,17 +34,19 @@ class DashboardFragment : Fragment() {
             binding.imageViewG,
             binding.imageViewH,
             binding.imageViewI,
-            binding.imageViewDog,
-            binding.imageViewAA,
-            binding.imageViewBB,
-            binding.imageViewCC,
-            binding.imageViewDD,
-            binding.imageViewEE,
-            binding.imageViewFF,
-            binding.imageViewGG,
-            binding.imageViewHH,
-            binding.imageViewII,
-            binding.imageViewDogDog
+            binding.imageViewJ,
+            binding.imageViewK,
+            binding.imageViewL,
+            binding.imageViewM,
+            binding.imageViewN,
+            binding.imageViewO,
+            binding.imageViewP,
+            binding.imageViewQ,
+            binding.imageViewR,
+            binding.imageViewS,
+            binding.imageViewT,
+            binding.imageViewU,
+            binding.imageViewV
 
 
             // Add additional ImageViews here if needed

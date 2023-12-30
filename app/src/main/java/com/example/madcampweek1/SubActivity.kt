@@ -7,26 +7,28 @@ import android.widget.ImageView
 class SubActivity : AppCompatActivity() {
 
     private val images = intArrayOf(
-        R.drawable.a,
-        R.drawable.b,
-        R.drawable.c,
-        R.drawable.d,
-        R.drawable.e,
-        R.drawable.f,
-        R.drawable.g,
-        R.drawable.h,
-        R.drawable.i,
-        R.drawable.dog,
-        R.drawable.a,
-        R.drawable.b,
-        R.drawable.c,
-        R.drawable.d,
-        R.drawable.e,
-        R.drawable.f,
-        R.drawable.g,
-        R.drawable.h,
-        R.drawable.i,
-        R.drawable.dog
+        R.drawable.pokea,
+        R.drawable.pokeb,
+        R.drawable.pokec,
+        R.drawable.poked,
+        R.drawable.pokee,
+        R.drawable.pokef,
+        R.drawable.pokeg,
+        R.drawable.pokeh,
+        R.drawable.pokei,
+        R.drawable.pokej,
+        R.drawable.pokek,
+        R.drawable.pokel,
+        R.drawable.pokem,
+        R.drawable.poken,
+        R.drawable.pokeo,
+        R.drawable.pokep,
+        R.drawable.pokeq,
+        R.drawable.poker,
+        R.drawable.pokes,
+        R.drawable.poket,
+        R.drawable.pokeu,
+        R.drawable.pokev
     )
 
 
