@@ -1,6 +1,10 @@
 package com.example.madcampweek1
 
+import android.annotation.SuppressLint
+import android.content.Context
 import android.os.Bundle
+import android.provider.ContactsContract.CommonDataKinds.Im
+import android.widget.ImageView
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -10,6 +14,12 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.madcampweek1.databinding.ActivityMainBinding
+import android.content.Intent
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.FrameLayout
+import androidx.fragment.app.Fragment
 import org.json.JSONArray
 import org.json.JSONObject
 import java.io.BufferedReader
@@ -18,7 +28,7 @@ import java.io.InputStreamReader
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-
+    @SuppressLint("ResourceType")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -28,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         val navView: BottomNavigationView = binding.navView
 
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
-        // Passing each menu ID as a set of Ids because each
+        // Passing each menu ID as aa.png set of Ids because each
         // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(setOf(
                 R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications))
@@ -37,6 +47,3 @@ class MainActivity : AppCompatActivity() {
 
 
     }
-
-
-}
