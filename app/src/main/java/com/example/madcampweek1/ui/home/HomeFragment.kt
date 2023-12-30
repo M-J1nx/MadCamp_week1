@@ -1,5 +1,6 @@
 package com.example.madcampweek1.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -22,6 +23,7 @@ class HomeFragment : Fragment() {
     private val binding get() = _binding!!
 
     private val phoneNumberSet = ArrayList<String>()
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -52,7 +54,7 @@ class HomeFragment : Fragment() {
         _binding = null
     }
 
-    private fun getJson() {
+    public fun getJson() {
         try {
             val inputStream = requireContext().assets.open("Number.json")
             val reader = BufferedReader(InputStreamReader(inputStream))
@@ -64,6 +66,7 @@ class HomeFragment : Fragment() {
                 buffer.append("$line\n")
                 line = reader.readLine()
             }
+
             val jsonData = buffer.toString()
 
             val jsonArray = JSONArray(jsonData)
@@ -75,7 +78,8 @@ class HomeFragment : Fragment() {
                 val phoneNumber = jsonObject.getString("phoneNumber")
                 val relationship = jsonObject.getString("relationship")
 
-                val entry = "$name : $phoneNumber : $relationship"
+                val entry = "$name,$phoneNumber,$relationship"
+
                 phoneNumberSet.add(entry)
             }
         } catch (e: Exception) {
