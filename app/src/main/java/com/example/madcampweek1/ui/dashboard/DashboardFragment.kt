@@ -26,7 +26,7 @@ class DashboardFragment : Fragment() {
         val root: View = binding.root
 
         // Accessing views using binding
-        val imageViewA: ImageView = binding.imageView_A
+        val imageViewA: ImageView = binding.imageViewA
 
         // Set OnClickListener for the ImageView
         imageViewA.setOnClickListener {
