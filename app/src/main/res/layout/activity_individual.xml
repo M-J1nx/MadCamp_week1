@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.home.IndividualActivity">
+
+    <!-- 사진 및 이름 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@mipmap/ic_launcher"/>
+
+        <TextView
+            android:id="@+id/nameView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="name"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+
+    <!-- 경계선 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#4BAF9B"
+        android:layout_margin="5dp"
+        />
+
+    <!-- 전화번호 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone Number : "
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            />
+
+        <TextView
+            android:id="@+id/numberView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="010-0000-0000"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            />
+
+    </LinearLayout>
+
+    <!-- 경계선 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#4BAF9B"
+        android:layout_margin="5dp"
+        />
+
+    <!-- 관계 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Relationship : "
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            />
+
+        <TextView
+            android:id="@+id/relationshipView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="원수"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            />
+    </LinearLayout>
+
+    <!-- 경계선 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#4BAF9B"
+        android:layout_margin="5dp"
+        />
+
+    <!-- 메모 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+</LinearLayout>
