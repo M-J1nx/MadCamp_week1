@@ -36,6 +36,9 @@ class SubActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sub) // Ensure this is your SubActivity layout file
 
+
+        getSupportActionBar()?.setTitle("사진 크게 보기")
+
         val clickedImageIndex = intent.getIntExtra("clicked_image_index", -1)
         val imageViewL = findViewById<ImageView>(R.id.imageViewL) // Get reference to the ImageView
 
