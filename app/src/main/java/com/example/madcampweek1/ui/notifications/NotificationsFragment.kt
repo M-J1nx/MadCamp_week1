@@ -6,11 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.madcampweek1.R
 import com.example.madcampweek1.databinding.FragmentNotificationsBinding
+import com.example.madcampweek1.ui.MenuRecommand.MenuRecommendFragment
 
 class NotificationsFragment : Fragment() {
 
@@ -36,6 +36,11 @@ class NotificationsFragment : Fragment() {
 //            textView.text = it
 //        }
 
+        val recommendButton: Button = root.findViewById(R.id.recommendButton)
+        recommendButton.setOnClickListener {
+            recommendFood()
+        }
+
         val rotateButton: Button = root.findViewById(R.id.rotateButton)
         rotateButton.setOnClickListener {
             rotateRoulette()
@@ -52,6 +57,16 @@ class NotificationsFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    fun recommendFood() {
+        val transaction = requireActivity().supportFragmentManager.beginTransaction()
+
+        // Call menu recommend Fragment
+        val fragment = MenuRecommendFragment()
+        transaction.replace(R.id.nav_host_fragment_activity_main, fragment)
+        transaction.addToBackStack(null)
+        transaction.commit()
     }
 
     fun rotateRoulette() {
@@ -72,8 +87,4 @@ class NotificationsFragment : Fragment() {
     fun resetRoulette() {
         binding.roulette.rotateRoulette(0.0F, 1000, null)
     }
-
-
-
-
 }

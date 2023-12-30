@@ -15,7 +15,7 @@
             android:id="@+id/rotateResultTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Total Result"
+            android:text="오늘은 뭘 먹을까?"
             android:textSize="20dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="31dp"
@@ -48,8 +48,19 @@
         android:layout_marginTop="-260dp" />
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/recommendButton"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:text="메뉴 추가로 추천 받기"
+        android:layout_marginBottom="230px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/rotateButton"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:text="추천 받기"
         android:layout_marginBottom="100px"
@@ -61,7 +72,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/resetButton"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:text="초기화"
         android:layout_marginBottom="100px"

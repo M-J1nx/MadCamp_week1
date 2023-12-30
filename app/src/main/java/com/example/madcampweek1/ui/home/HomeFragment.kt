@@ -22,7 +22,7 @@ class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
 
-    private val phoneNumberSet = ArrayList<String>()
+    private var phoneNumberSet = ArrayList<String>()
 
 
     override fun onCreateView(
@@ -56,6 +56,8 @@ class HomeFragment : Fragment() {
 
     public fun getJson() {
         try {
+            phoneNumberSet = ArrayList<String>()
+
             val inputStream = requireContext().assets.open("Number.json")
             val reader = BufferedReader(InputStreamReader(inputStream))
 
