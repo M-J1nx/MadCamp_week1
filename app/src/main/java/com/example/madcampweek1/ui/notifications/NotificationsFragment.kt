@@ -40,6 +40,12 @@ class NotificationsFragment : Fragment() {
         rotateButton.setOnClickListener {
             rotateRoulette()
         }
+
+        val resetButton: Button = root.findViewById(R.id.resetButton)
+        resetButton.setOnClickListener {
+            resetRoulette()
+        }
+
         return root
     }
 
@@ -62,6 +68,11 @@ class NotificationsFragment : Fragment() {
         val toDegrees = (2000..10000).random().toFloat()
         binding.roulette.rotateRoulette(toDegrees, 1000, rotateListener)
     }
+
+    fun resetRoulette() {
+        binding.roulette.rotateRoulette(0.0F, 1000, null)
+    }
+
 
 
 

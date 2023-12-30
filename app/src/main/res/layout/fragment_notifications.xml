@@ -34,15 +34,43 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <View
+        android:id="@+id/triangle"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/inverted_triangle"
+        android:elevation="100dp"
+        android:alpha="1.0"
+        app:layout_constraintStart_toStartOf="@+id/roulette"
+        app:layout_constraintEnd_toEndOf="@+id/roulette"
+        app:layout_constraintTop_toTopOf="@+id/roulette"
+        app:layout_constraintBottom_toBottomOf="@+id/roulette"
+        android:layout_marginTop="-260dp" />
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/rotateButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="rotate"
+        android:text="추천 받기"
         android:layout_marginBottom="100px"
+        android:layout_marginRight="300px"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="초기화"
+        android:layout_marginBottom="100px"
+        android:layout_marginLeft="300px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
