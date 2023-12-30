@@ -50,5 +50,9 @@ class MainActivity : AppCompatActivity() {
         navView.setupWithNavController(navController)
 
 
+<<<<<<< Updated upstream
     }
 }
+=======
+    }}
+>>>>>>> Stashed changes
