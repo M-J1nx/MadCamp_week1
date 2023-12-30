@@ -15,10 +15,32 @@
         android:drawableTop="@drawable/question_mimikyu"
         android:layout_marginLeft="400px"
         android:clickable="true"
+        android:contentDescription="this is mimikyu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:src="@drawable/thinking"
+        tools:ignore="MissingConstraints"
+        android:layout_marginRight="350px"
+        android:layout_marginBottom="600px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="this is test menu"
+        android:textSize="20dp"
+        tools:ignore="MissingConstraints">
+    </TextView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
