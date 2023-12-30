@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">MadCampWeek1</string>
-    <string name="title_home">전화번호부</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_home">전화번호</string>
+    <string name="title_dashboard">갤러리</string>
+    <string name="title_notifications">점메추</string>
     <string name="title_activity_individual">IndividualActivity</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>

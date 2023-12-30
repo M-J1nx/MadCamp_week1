@@ -82,6 +82,7 @@ class HomeFragment : Fragment() {
 
                 phoneNumberSet.add(entry)
             }
+            phoneNumberSet.sort()
         } catch (e: Exception) {
             e.printStackTrace()
         }
