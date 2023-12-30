@@ -8,6 +8,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="mint">#D60707</color>
-    <color name="dark_mint">#9F0000</color>
+    <color name="red">#D60707</color>
+    <color name="dark_red">#9F0000</color>
 </resources>

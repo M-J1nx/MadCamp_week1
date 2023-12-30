@@ -1,6 +1,7 @@
 package com.example.madcampweek1.ui.notifications
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -39,7 +40,6 @@ class NotificationsFragment : Fragment() {
         rotateButton.setOnClickListener {
             rotateRoulette()
         }
-
         return root
     }
 
@@ -49,7 +49,6 @@ class NotificationsFragment : Fragment() {
     }
 
     fun rotateRoulette() {
-
         val rotateListener = object: FoodRoulette.RotateListener {
             override fun onRotateStart() {
                 binding.rotateResultTv.text = "오늘 먹을 음식의 카테고리는? : "
@@ -63,5 +62,7 @@ class NotificationsFragment : Fragment() {
         val toDegrees = (2000..10000).random().toFloat()
         binding.roulette.rotateRoulette(toDegrees, 1000, rotateListener)
     }
+
+
 
 }
