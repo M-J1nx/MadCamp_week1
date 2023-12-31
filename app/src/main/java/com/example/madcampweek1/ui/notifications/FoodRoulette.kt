@@ -60,10 +60,12 @@ class FoodRoulette @JvmOverloads constructor(
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
 
-        val rectLeft = left.toFloat() + paddingLeft
-        val rectRight = right - paddingRight
-        val rectTop = height / 2f - rectRight / 2f + paddingTop
-        val rectBottom = height / 2f + rectRight / 2f - paddingRight
+        val paddingSize = 200
+
+        val rectLeft = left.toFloat() + paddingLeft + paddingSize
+        val rectRight = right - paddingRight - paddingSize
+        val rectTop = height / 2f - rectRight / 2f + paddingTop + paddingSize/2
+        val rectBottom = height / 2f + rectRight / 2f - paddingRight - paddingSize/2
 
         rectF.set(rectLeft, rectTop, rectRight.toFloat(), rectBottom)
 
@@ -75,11 +77,15 @@ class FoodRoulette @JvmOverloads constructor(
 
         if (rouletteSize in 2..8) {
             val sweepAngle = 360f / rouletteSize.toFloat()
-            val colors = listOf("#86D3C3", "#CDFFF5")
+            val colors = listOf("#FFDAA4A4", "#FFEC6262")
+
+//            val centerX = (rectF.left + rectF.right)/2
+//            val centerY = (rectF.top + rectF.bottom)/2
+//            val radius = (rectF.right - rectF.left)/2*0.5
 
             val centerX = (rectF.left + rectF.right)/2
             val centerY = (rectF.top + rectF.bottom)/2
-            val radius = (rectF.right - rectF.left)/2*0.5
+            val radius = (rectF.right - rectF.left)/1.5*0.5
 
             var colorIndex=0
             for (i in 0 until rouletteSize) {
@@ -110,7 +116,7 @@ class FoodRoulette @JvmOverloads constructor(
             }
 
             override fun onAnimationEnd(animation: Animation?) {
-                rotateListener?.onRotateEnd("<결과>")
+                rotateListener?.onRotateEnd(getRouletteRotateResult(toDegrees))
             }
         }
 
@@ -121,7 +127,23 @@ class FoodRoulette @JvmOverloads constructor(
         )
         rotateAnim.duration = duration
         rotateAnim.fillAfter = true
+        rotateAnim.setAnimationListener(animListener)
 
         startAnimation(rotateAnim)
+    }
+
+    private fun getRouletteRotateResult(degrees: Float): String {
+        val moveDegrees = degrees % 360
+        val resultAngle = if (moveDegrees > 270) 360 - moveDegrees + 270 else 270 - moveDegrees
+        for (i in 1..rouletteSize) {
+            if (resultAngle < (360 / rouletteSize) * i) {
+                if (i - 1 >= rouletteData.size) {
+                    return "empty"
+                }
+                return rouletteData[i - 1]
+            }
+        }
+
+        return ""
     }
 }

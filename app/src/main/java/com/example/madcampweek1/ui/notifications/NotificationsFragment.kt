@@ -1,15 +1,16 @@
 package com.example.madcampweek1.ui.notifications
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.madcampweek1.R
 import com.example.madcampweek1.databinding.FragmentNotificationsBinding
+import com.example.madcampweek1.ui.MenuRecommand.MenuRecommendFragment
 
 class NotificationsFragment : Fragment() {
 
@@ -18,6 +19,10 @@ class NotificationsFragment : Fragment() {
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
+
+    // Call menu recommend Fragment
+    val fragment = MenuRecommendFragment()
+    private var pickedCategory: String = ""
 
     override fun onCreateView(
             inflater: LayoutInflater,
@@ -35,9 +40,33 @@ class NotificationsFragment : Fragment() {
 //            textView.text = it
 //        }
 
+        val recommendButton: Button = root.findViewById(R.id.recommendButton)
+        recommendButton.setOnClickListener {
+
+            val parentViewGroup: ViewGroup = root.findViewById(R.id.notificationContainer)
+
+            val triangle: View = parentViewGroup.findViewById(R.id.triangle)
+            val rotateButton: Button = parentViewGroup.findViewById(R.id.rotateButton)
+            val resetButton: Button = parentViewGroup.findViewById(R.id.resetButton)
+            val recommendButton: Button = parentViewGroup.findViewById(R.id.recommendButton)
+
+
+            parentViewGroup.removeView(triangle)
+            parentViewGroup.removeView(rotateButton)
+            parentViewGroup.removeView(resetButton)
+            parentViewGroup.removeView(recommendButton)
+
+            recommendFood()
+        }
+
         val rotateButton: Button = root.findViewById(R.id.rotateButton)
         rotateButton.setOnClickListener {
             rotateRoulette()
+        }
+
+        val resetButton: Button = root.findViewById(R.id.resetButton)
+        resetButton.setOnClickListener {
+            resetRoulette()
         }
 
         return root
@@ -48,15 +77,27 @@ class NotificationsFragment : Fragment() {
         _binding = null
     }
 
-    fun rotateRoulette() {
+    fun recommendFood() {
 
+        val transaction = requireActivity().supportFragmentManager.beginTransaction()
+
+        transaction.replace(R.id.notificationContainer, fragment)
+        transaction.addToBackStack(null)
+        transaction.commit()
+    }
+
+    fun rotateRoulette() {
         val rotateListener = object: FoodRoulette.RotateListener {
             override fun onRotateStart() {
                 binding.rotateResultTv.text = "오늘 먹을 음식의 카테고리는? : "
             }
 
-            override fun onRotateEnd(result: String) {
-                binding.rotateResultTv.text = "오늘 먹을 음식의 카테고리는? : $result"
+            override fun onRotateEnd(pickedCategory: String) {
+                binding.rotateResultTv.text = "오늘 먹을 음식의 카테고리는? : $pickedCategory"
+
+                val bundle = Bundle()
+                bundle.putString("pickedCategory", pickedCategory)
+                fragment.arguments = bundle
             }
         }
 
@@ -64,4 +105,7 @@ class NotificationsFragment : Fragment() {
         binding.roulette.rotateRoulette(toDegrees, 1000, rotateListener)
     }
 
+    fun resetRoulette() {
+        binding.roulette.rotateRoulette(0.0F, 1000, null)
+    }
 }

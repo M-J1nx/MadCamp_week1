@@ -4,34 +4,89 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/notificationContainer"
     tools:context=".ui.notifications.NotificationsFragment">
 
-    <TextView
-        android:id="@+id/rotateResultTv"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="31dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:ignore="MissingConstraints">
 
+        <TextView
+            android:id="@+id/rotateResultTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="오늘은 뭘 먹을까?"
+            android:textSize="20dp"
+            android:shadowColor="@color/white"
+            android:shadowDx="-1"
+            android:shadowDy="-1"
+            android:shadowRadius="1"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="31dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
 
     <com.example.madcampweek1.ui.notifications.FoodRoulette
         android:id="@+id/roulette"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
+        android:layout_marginTop="50dp"
         app:layout_constraintBottom_toTopOf="@+id/rotateButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/rotateButton"
-        android:layout_width="wrap_content"
+    <View
+        android:id="@+id/triangle"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/inverted_triangle"
+        android:elevation="100dp"
+        android:alpha="1.0"
+        app:layout_constraintStart_toStartOf="@+id/roulette"
+        app:layout_constraintEnd_toEndOf="@+id/roulette"
+        app:layout_constraintTop_toTopOf="@+id/roulette"
+        app:layout_constraintBottom_toBottomOf="@+id/roulette"
+        android:layout_marginTop="-260dp" />
+
+    <Button
+        android:id="@+id/recommendButton"
+        android:layout_width="210dp"
         android:layout_height="wrap_content"
-        android:text="rotate"
+        android:text="메뉴 추가로 추천 받기"
+        android:layout_marginBottom="230px"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <Button
+        android:id="@+id/rotateButton"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="추천 받기"
+        android:layout_marginBottom="100px"
+        android:layout_marginRight="300px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/resetButton"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="초기화"
+        android:layout_marginBottom="100px"
+        android:layout_marginLeft="300px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
