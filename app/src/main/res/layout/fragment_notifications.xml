@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/notificationContainer"
     tools:context=".ui.notifications.NotificationsFragment">
 
     <LinearLayout
@@ -47,7 +48,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/roulette"
         android:layout_marginTop="-260dp" />
 
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/recommendButton"
         android:layout_width="210dp"
         android:layout_height="wrap_content"
@@ -58,7 +59,7 @@
         app:layout_constraintStart_toStartOf="parent"
         />
 
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/rotateButton"
         android:layout_width="100dp"
         android:layout_height="wrap_content"

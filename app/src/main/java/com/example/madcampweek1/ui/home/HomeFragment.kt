@@ -25,6 +25,7 @@ class HomeFragment : Fragment() {
     private var phoneNumberSet = ArrayList<String>()
 
 
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -33,10 +34,10 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        //val textView: TextView = binding.textHome
+
 
         // JSON 데이터 가져오기
-        getJson()
+        getJson("Number.json", phoneNumberSet)
 
         // RecyclerView 설정
         val recyclerView: RecyclerView = binding.recyclerView
@@ -54,11 +55,12 @@ class HomeFragment : Fragment() {
         _binding = null
     }
 
-    public fun getJson() {
+    public fun getJson(filename: String, result: ArrayList<String>) {
         try {
-            phoneNumberSet = ArrayList<String>()
 
-            val inputStream = requireContext().assets.open("Number.json")
+            result.clear()
+
+            val inputStream = requireContext().assets.open(filename)
             val reader = BufferedReader(InputStreamReader(inputStream))
 
             val buffer = StringBuffer()
@@ -70,7 +72,6 @@ class HomeFragment : Fragment() {
             }
 
             val jsonData = buffer.toString()
-
             val jsonArray = JSONArray(jsonData)
 
             for (i in 0 until jsonArray.length()) {
@@ -82,9 +83,10 @@ class HomeFragment : Fragment() {
 
                 val entry = "$name,$phoneNumber,$relationship"
 
-                phoneNumberSet.add(entry)
+                result.add(entry)
             }
-            phoneNumberSet.sort()
+            result.sort()
+
         } catch (e: Exception) {
             e.printStackTrace()
         }

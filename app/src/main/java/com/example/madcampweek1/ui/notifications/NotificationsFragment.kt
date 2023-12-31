@@ -20,6 +20,10 @@ class NotificationsFragment : Fragment() {
     // onDestroyView.
     private val binding get() = _binding!!
 
+    // Call menu recommend Fragment
+    val fragment = MenuRecommendFragment()
+    private var pickedCategory: String = ""
+
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
@@ -38,6 +42,20 @@ class NotificationsFragment : Fragment() {
 
         val recommendButton: Button = root.findViewById(R.id.recommendButton)
         recommendButton.setOnClickListener {
+
+            val parentViewGroup: ViewGroup = root.findViewById(R.id.notificationContainer)
+
+            val triangle: View = parentViewGroup.findViewById(R.id.triangle)
+            val rotateButton: Button = parentViewGroup.findViewById(R.id.rotateButton)
+            val resetButton: Button = parentViewGroup.findViewById(R.id.resetButton)
+            val recommendButton: Button = parentViewGroup.findViewById(R.id.recommendButton)
+
+
+            parentViewGroup.removeView(triangle)
+            parentViewGroup.removeView(rotateButton)
+            parentViewGroup.removeView(resetButton)
+            parentViewGroup.removeView(recommendButton)
+
             recommendFood()
         }
 
@@ -60,11 +78,10 @@ class NotificationsFragment : Fragment() {
     }
 
     fun recommendFood() {
+
         val transaction = requireActivity().supportFragmentManager.beginTransaction()
 
-        // Call menu recommend Fragment
-        val fragment = MenuRecommendFragment()
-        transaction.replace(R.id.nav_host_fragment_activity_main, fragment)
+        transaction.replace(R.id.notificationContainer, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
     }
@@ -75,8 +92,12 @@ class NotificationsFragment : Fragment() {
                 binding.rotateResultTv.text = "오늘 먹을 음식의 카테고리는? : "
             }
 
-            override fun onRotateEnd(result: String) {
-                binding.rotateResultTv.text = "오늘 먹을 음식의 카테고리는? : $result"
+            override fun onRotateEnd(pickedCategory: String) {
+                binding.rotateResultTv.text = "오늘 먹을 음식의 카테고리는? : $pickedCategory"
+
+                val bundle = Bundle()
+                bundle.putString("pickedCategory", pickedCategory)
+                fragment.arguments = bundle
             }
         }
 

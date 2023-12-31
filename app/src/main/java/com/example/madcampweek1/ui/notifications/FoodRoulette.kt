@@ -140,7 +140,6 @@ class FoodRoulette @JvmOverloads constructor(
                 if (i - 1 >= rouletteData.size) {
                     return "empty"
                 }
-
                 return rouletteData[i - 1]
             }
         }
