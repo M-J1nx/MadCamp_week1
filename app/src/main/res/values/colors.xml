@@ -10,4 +10,5 @@
 
     <color name="red">#D60707</color>
     <color name="dark_red">#9F0000</color>
+    <color name="invisible">#00FF0000</color>
 </resources>

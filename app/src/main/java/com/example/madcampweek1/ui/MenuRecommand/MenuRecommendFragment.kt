@@ -1,5 +1,8 @@
 package com.example.madcampweek1.ui.MenuRecommand
 
+import android.animation.ObjectAnimator
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import android.util.Log
@@ -41,15 +44,22 @@ class MenuRecommendFragment : Fragment() {
         // JSON 데이터 가져오기
         getJson("Food.json", foodSet, pickedCategory)
 
-        // pick menu
+        // background menu
         binding.menu.text = foodSet.joinToString("   ")
-        Log.d("food", "$foodSet")
 
         val menuRecommend: Button = view.findViewById(R.id.recommendMimikyu)
         menuRecommend.setOnClickListener {
+
+            //pick menu
             var pick = foodSet.random()
+            popOut(binding.pickedMenu)
+
             binding.recommendMimikyu.setIconResource(R.drawable.answer_mimikyu)
             binding.recommendMimikyu.iconTint = null
+
+            val colorDrawable = ColorDrawable(Color.parseColor("#00FF0000"))
+            binding.alarm.background = colorDrawable
+            binding.alarm.text = ""
 
             binding.pickedMenu.text = pick
         }
@@ -99,5 +109,15 @@ class MenuRecommendFragment : Fragment() {
         } catch (e: Exception) {
             e.printStackTrace()
         }
+    }
+
+    private fun popOut(view: View) {
+        val popOutAnimatorX = ObjectAnimator.ofFloat(view, View.SCALE_X, 0.5f, 1.5f)
+        popOutAnimatorX.duration = 300
+        popOutAnimatorX.start()
+
+        val popOutAnimatorY = ObjectAnimator.ofFloat(view, View.SCALE_Y, 0.5f, 1.5f)
+        popOutAnimatorY.duration = 300
+        popOutAnimatorY.start()
     }
 }

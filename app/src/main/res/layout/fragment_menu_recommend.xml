@@ -11,7 +11,7 @@
         android:id="@+id/recommendMimikyu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#00FF0000"
+        android:background="@color/invisible"
         android:drawableTop="@drawable/question_mimikyu"
         android:layout_marginLeft="400px"
         android:clickable="true"
@@ -57,11 +57,26 @@
         android:elevation="100dp"
         android:layout_marginRight="350px"
         android:layout_marginBottom="600px"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints"
+        />
+
+    <TextView
+        android:id="@+id/alarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="따라큐를 클릭해봐요! >"
+        android:background="@color/black"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:elevation="1000dp"
+        android:layout_marginRight="150dp"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         />
 
     <TextView
