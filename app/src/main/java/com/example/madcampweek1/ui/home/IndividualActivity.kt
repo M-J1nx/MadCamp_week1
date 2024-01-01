@@ -2,7 +2,9 @@ package com.example.madcampweek1.ui.home
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import com.example.madcampweek1.R
 
@@ -28,5 +30,12 @@ class IndividualActivity : AppCompatActivity() {
         var relView: TextView = findViewById(R.id.relationshipView)
         relView.setText(relIntent)
 
+        val picIntent = intent.getStringExtra("picture")
+        if (picIntent != null) {
+            val imageView: ImageView = findViewById(R.id.picture)
+            val imageResource =
+                resources.getIdentifier(picIntent, "drawable", packageName)
+            imageView.setImageResource(imageResource)
+        }
     }
 }

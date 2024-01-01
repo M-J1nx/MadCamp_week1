@@ -7,18 +7,31 @@
     android:orientation="vertical"
     tools:context=".ui.home.IndividualActivity">
 
-    <!-- 사진 및 이름 -->
+    <!-- 사진 -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        app:cardCornerRadius="90dp"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/picture"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:src="@drawable/profile"
+            android:layout_margin="10dp"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- 이름 -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:src="@mipmap/ic_launcher"/>
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/nameView"
@@ -26,93 +39,81 @@
             android:layout_height="match_parent"
             android:text="name"
             android:gravity="center"
+            android:layout_gravity="center"
             android:textColor="@color/black"
             android:textSize="30sp" />
 
     </LinearLayout>
 
-    <!-- 경계선 -->
-    <View
+    <!-- 정보 상자-->
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="#4BAF9B"
-        android:layout_margin="5dp"
-        />
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        app:cardCornerRadius="40dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true"
+        >
 
-    <!-- 전화번호 -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:orientation="horizontal">
-
+        <!-- 전화번호 -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Phone Number : "
-            android:textSize="20sp"
-            android:textColor="@android:color/black"
+            android:layout_margin="20dp"
+            android:text="     전화번호"
+            android:textSize="15sp"
+            android:textColor="#6F6F6F"
             />
-
         <TextView
             android:id="@+id/numberView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="30dp"
             android:text="010-0000-0000"
-            android:textSize="20sp"
             android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
+        <!-- 경계선 -->
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginTop="90dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#C3C3C3"
             />
 
-    </LinearLayout>
-
-    <!-- 경계선 -->
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#4BAF9B"
-        android:layout_margin="5dp"
-        />
-
-    <!-- 관계 -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:orientation="horizontal">
-
+        <!-- 관계 -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Relationship : "
-            android:textSize="20sp"
-            android:textColor="@android:color/black"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="20dp"
+            android:text="     관계"
+            android:textSize="15sp"
+            android:textColor="#6F6F6F"
             />
-
         <TextView
             android:id="@+id/relationshipView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="원수"
-            android:textSize="20sp"
+            android:layout_marginTop="130dp"
+            android:layout_marginLeft="30dp"
+            android:text="귀여운 에몽가"
             android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
+        <!-- 경계선 -->
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginTop="170dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#C3C3C3"
             />
-    </LinearLayout>
 
-    <!-- 경계선 -->
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#4BAF9B"
-        android:layout_margin="5dp"
-        />
-
-    <!-- 메모 -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:orientation="horizontal">
-
-    </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
 </LinearLayout>
