@@ -6,11 +6,21 @@
     android:orientation="vertical"
     >
 
-<Button
+    <Button
+    android:id="@+id/get_image_btn"
     android:layout_width="match_parent"
     android:layout_height="50dp"
     android:text="Access Gallery"/>
-<androidx.recyclerview.widget.RecyclerView
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/main_imgView"
+        android:src="@drawable/pokedefalt"
+        ></ImageView>
+
+
+    <androidx.recyclerview.widget.RecyclerView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/recyclerView"
     android:layout_width="match_parent"
