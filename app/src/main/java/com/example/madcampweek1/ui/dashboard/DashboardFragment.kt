@@ -31,14 +31,16 @@ class DashboardFragment : Fragment() {
         val layoutManager = GridLayoutManager(context, 2)
         recyclerView.layoutManager = layoutManager
 
+
         val imageList: List<Int> = listOf(
             R.drawable.pokea, R.drawable.pokeb, R.drawable.pokec, R.drawable.poked,
             R.drawable.pokee, R.drawable.pokef,R.drawable.pokeg,R.drawable.pokeh,
             R.drawable.pokei,R.drawable.pokej,R.drawable.pokek,R.drawable.pokel,
             R.drawable.pokem,R.drawable.poken,R.drawable.pokeo,R.drawable.pokep,
             R.drawable.pokeq,R.drawable.poker,R.drawable.pokes,R.drawable.poket,
-            R.drawable.pokeu,R.drawable.pokev
-        )
+            R.drawable.pokeu,R.drawable.pokev,)
+
+
 
         val adapter = ImageAdapter(imageList) { position ->
             val intent = Intent(requireActivity(), SubActivity::class.java)
