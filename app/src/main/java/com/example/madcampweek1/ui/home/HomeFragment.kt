@@ -2,6 +2,7 @@ package com.example.madcampweek1.ui.home
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -24,8 +25,6 @@ class HomeFragment : Fragment() {
 
     private var phoneNumberSet = ArrayList<String>()
 
-
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -33,8 +32,6 @@ class HomeFragment : Fragment() {
     ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
-
-
 
         // JSON 데이터 가져오기
         getJson("Number.json", phoneNumberSet)
@@ -80,8 +77,13 @@ class HomeFragment : Fragment() {
                 val name = jsonObject.getString("name")
                 val phoneNumber = jsonObject.getString("phoneNumber")
                 val relationship = jsonObject.getString("relationship")
+                val picture = jsonObject.getString("picture")
 
-                val entry = "$name,$phoneNumber,$relationship"
+                val entry = if (picture.isNotBlank()) {
+                    "$name,$phoneNumber,$relationship,$picture"
+                } else {
+                    "$name,$phoneNumber,$relationship"
+                }
 
                 result.add(entry)
             }
