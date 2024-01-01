@@ -7,6 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.madcampweek1.ImageAdapter
+import com.example.madcampweek1.R
 import com.example.madcampweek1.SubActivity
 import com.example.madcampweek1.databinding.FragmentDashboardBinding
 
@@ -23,48 +27,27 @@ class DashboardFragment : Fragment() {
         _binding = FragmentDashboardBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        // Accessing views using binding
-        val imageViewList = listOf(
-            binding.imageViewA,
-            binding.imageViewB,
-            binding.imageViewC,
-            binding.imageViewD,
-            binding.imageViewE,
-            binding.imageViewF,
-            binding.imageViewG,
-            binding.imageViewH,
-            binding.imageViewI,
-            binding.imageViewJ,
-            binding.imageViewK,
-            binding.imageViewL,
-            binding.imageViewM,
-            binding.imageViewN,
-            binding.imageViewO,
-            binding.imageViewP,
-            binding.imageViewQ,
-            binding.imageViewR,
-            binding.imageViewS,
-            binding.imageViewT,
-            binding.imageViewU,
-            binding.imageViewV
+        val recyclerView: RecyclerView = binding.recyclerView
+        val layoutManager = GridLayoutManager(context, 2)
+        recyclerView.layoutManager = layoutManager
 
 
-            // Add additional ImageViews here if needed
-        )
+        val imageList: List<Int> = listOf(
+            R.drawable.pokea, R.drawable.pokeb, R.drawable.pokec, R.drawable.poked,
+            R.drawable.pokee, R.drawable.pokef,R.drawable.pokeg,R.drawable.pokeh,
+            R.drawable.pokei,R.drawable.pokej,R.drawable.pokek,R.drawable.pokel,
+            R.drawable.pokem,R.drawable.poken,R.drawable.pokeo,R.drawable.pokep,
+            R.drawable.pokeq,R.drawable.poker,R.drawable.pokes,R.drawable.poket,
+            R.drawable.pokeu,R.drawable.pokev,)
 
-        // Set OnClickListener for all ImageViews using a loop
-        val imageClickListener = View.OnClickListener { view:View->
+
+
+        val adapter = ImageAdapter(imageList) { position ->
             val intent = Intent(requireActivity(), SubActivity::class.java)
-            val index = imageViewList.indexOf(view)
-
-            if (index != -1) {
-                intent.putExtra("clicked_image_index", index)
-                startActivity(intent)
-            }
+            intent.putExtra("clicked_image_index", position)
+            startActivity(intent)
         }
-        imageViewList.forEach { imageView ->
-            imageView.setOnClickListener(imageClickListener)
-        }
+        recyclerView.adapter = adapter
 
         return root
     }
@@ -74,3 +57,4 @@ class DashboardFragment : Fragment() {
         _binding = null
     }
 }
+

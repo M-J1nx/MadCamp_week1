@@ -1,8 +1,15 @@
 package com.example.madcampweek1
 
+import android.app.Activity
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageView
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import com.example.madcampweek1.SubActivity
+import com.example.madcampweek1.databinding.FragmentDashboardBinding
 
 class SubActivity : AppCompatActivity() {
 
@@ -38,8 +45,7 @@ class SubActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sub) // Ensure this is your SubActivity layout file
 
-
-        getSupportActionBar()?.setTitle("사진 크게 보기")
+        supportActionBar?.setTitle("사진 크게 보기")
 
         val clickedImageIndex = intent.getIntExtra("clicked_image_index", -1)
         val imageViewL = findViewById<ImageView>(R.id.imageViewL) // Get reference to the ImageView
@@ -47,5 +53,12 @@ class SubActivity : AppCompatActivity() {
         if (clickedImageIndex != -1 && clickedImageIndex < images.size) {
             imageViewL.setImageResource(images[clickedImageIndex])
         }
+
+        imageViewL.setOnClickListener{
+            finish()
+        }
+
     }
+
+
 }
