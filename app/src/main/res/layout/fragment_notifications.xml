@@ -37,28 +37,28 @@
 
 
     <ImageView
+        android:id="@+id/closePokeball"
         android:layout_width="290dp"
         android:layout_height="290dp"
-        android:layout_gravity="center"
-        android:layout_marginRight="44dp"
-        android:layout_marginBottom="264dp"
         android:src="@drawable/pokeball"
         android:visibility="visible"
+        android:layout_marginBottom="250dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:id="@+id/closePokeball"/>
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:layout_width="320dp"
         android:layout_height="320dp"
-        android:layout_gravity="center"
-        android:layout_marginRight="24dp"
-        android:layout_marginBottom="248dp"
         android:src="@drawable/openpokeball"
         android:visibility="invisible"
+        android:layout_marginBottom="230dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:id="@+id/openPokeball"/>
+        android:id="@+id/openPokeball"
+        tools:ignore="MissingConstraints"/>
 
     <TextView
         android:id="@+id/rotateResultTv"
