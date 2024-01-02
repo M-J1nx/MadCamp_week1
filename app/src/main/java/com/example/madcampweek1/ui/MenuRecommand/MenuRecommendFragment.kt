@@ -53,10 +53,12 @@ class MenuRecommendFragment : Fragment() {
 
         val pickedCategory = arguments?.getString("pickedCategory")
 
+        getJson("Food.json", foodSet, pickedCategory)
+        updateUI()
+        updatePic(picURL)
 
         val menuRecommend: AppCompatImageButton = view.findViewById(R.id.recommend)
         menuRecommend.setOnClickListener {
-
             // JSON 데이터 가져오기
             getJson("Food.json", foodSet, pickedCategory)
             updateUI()
@@ -66,7 +68,7 @@ class MenuRecommendFragment : Fragment() {
         val confirmButton: AppCompatImageButton = view.findViewById(R.id.confirmButton)
         confirmButton.setOnClickListener {
             if (selectIndex-1 < 0) {
-                var confirmWarn = Toast.makeText(requireContext(), "선택 횟수 증가 버튼입니다.\n     먼저 음식을 뽑아주세요", Toast.LENGTH_SHORT)
+                var confirmWarn = Toast.makeText(requireContext(), "선택 횟수 증가 버튼입니다.\n먼저 음식을 뽑아주세요", Toast.LENGTH_SHORT)
                 confirmWarn.show()
                 Handler().postDelayed(Runnable {
                     run(){
@@ -86,7 +88,7 @@ class MenuRecommendFragment : Fragment() {
         val resetButton: AppCompatImageButton = view.findViewById(R.id.resetButton)
         resetButton.setOnClickListener{
             if (selectIndex-1 < 0) {
-                var resetWarn = Toast.makeText(requireContext(), "선택 횟수 초기화 버튼입니다.\n      먼저 음식을 뽑아주세요", Toast.LENGTH_SHORT)
+                var resetWarn = Toast.makeText(requireContext(), "선택 횟수 초기화 버튼입니다.\n먼저 음식을 뽑아주세요", Toast.LENGTH_SHORT)
                 resetWarn.show()
                 Handler().postDelayed(Runnable {
                     run(){
@@ -105,6 +107,7 @@ class MenuRecommendFragment : Fragment() {
     private fun updatePic(url: String) {
         Glide.with(requireContext())
             .load(url)
+            .override(300, 200)
             .into(binding.foodPic)
     }
 

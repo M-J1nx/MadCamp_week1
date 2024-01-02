@@ -45,7 +45,6 @@ class CustomAdapter(private val localDataSet: ArrayList<String>) :
     // ViewHolder 안의 내용을 position에 해당되는 데이터로 교체함
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-        Log.d("test", "$localDataSet")
         val individualArray = localDataSet[position].split(",").map{it.trim()}
         holder.nameView.text = individualArray[0]
         holder.numberView.text = individualArray[1]
