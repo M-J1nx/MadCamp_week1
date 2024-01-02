@@ -54,11 +54,12 @@ class HomeFragment : Fragment() {
 
     private fun initSearchView() {
         // init SearchView
-        binding.search.isSubmitButtonEnabled = true
+        binding.search.isSubmitButtonEnabled = false
         binding.search.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
             androidx.appcompat.widget.SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
-                return false
+                filterData(query)
+                return true
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {
@@ -68,7 +69,9 @@ class HomeFragment : Fragment() {
         })
     }
 
+
     private fun filterData(query: String?) {
+        getJson("Number.json", phoneNumberSet)
         if (query.isNullOrBlank()) {
             // If the query is empty, show the original data
             filteredPhoneNumberSet.clear()

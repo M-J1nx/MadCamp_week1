@@ -54,7 +54,6 @@ class MenuRecommendFragment : Fragment() {
 
         val menuRecommend: AppCompatImageButton = view.findViewById(R.id.recommend)
         menuRecommend.setOnClickListener {
-
             // JSON 데이터 가져오기
             getJson("Food.json", foodSet, pickedCategory)
             updateUI()
@@ -103,6 +102,7 @@ class MenuRecommendFragment : Fragment() {
     private fun updatePic(url: String) {
         Glide.with(requireContext())
             .load(url)
+            .override(300, 200)
             .into(binding.foodPic)
     }
 
