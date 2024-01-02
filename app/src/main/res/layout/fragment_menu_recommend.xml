@@ -338,9 +338,10 @@
 
                     <TextView
                         android:id="@+id/comment"
-                        android:layout_width="340dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
                         android:layout_marginTop="10dp"
                         android:elevation="10dp"
                         android:text=""
