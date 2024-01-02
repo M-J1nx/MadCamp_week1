@@ -108,15 +108,8 @@ class DashboardFragment : Fragment() {
         binding.getImageBtn2.setOnClickListener {
             imageList.shuffle()
             adapter.notifyDataSetChanged()
-
-
         }
-        binding.getImageBtn3.setOnClickListener {
-            imageList.removeAt(0)
-            adapter.notifyDataSetChanged()
 
-
-        }
         fun convertDrawableResourcesToUri(context: Context, vararg resourceIds: Int): MutableList<Uri> {
             val uriList = mutableListOf<Uri>()
             resourceIds.forEach { resourceId ->
