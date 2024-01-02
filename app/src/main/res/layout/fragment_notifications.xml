@@ -36,69 +36,70 @@
         android:visibility="invisible"/>
 
 
-    <ImageView
-        android:id="@+id/closePokeball"
-        android:layout_width="290dp"
-        android:layout_height="290dp"
-        android:layout_gravity="center"
-        android:layout_marginRight="44dp"
-        android:layout_marginBottom="300dp"
-        android:src="@drawable/pokeball"
-        android:visibility="visible"
-        android:layout_marginBottom="250dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
-
-    <ImageView
-        android:id="@+id/openPokeball"
-        android:layout_width="317dp"
-        android:layout_height="317dp"
-        android:layout_gravity="center"
-        android:layout_marginRight="24dp"
-        android:layout_marginBottom="284dp"
-        android:src="@drawable/openpokeball"
-        android:visibility="invisible"
-        android:layout_marginBottom="230dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
-
-    <TextView
-        android:id="@+id/rotateResultTv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="230dp"
-        android:shadowColor="@color/white"
-        android:shadowDx="-1"
-        android:shadowDy="-1"
-        android:shadowRadius="1"
-        android:text=""
-        android:textColor="@color/white"
-        android:elevation="10dp"
-        android:fontFamily="@font/dunggeunmo"
-
-        android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="parent"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="35dp">
 
-        />
+        <ImageView
+            android:id="@+id/closePokeball"
+            android:layout_width="290dp"
+            android:layout_height="290dp"
+            android:layout_gravity="center"
+            android:src="@drawable/pokeball"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/openPokeball"
+            app:layout_constraintEnd_toEndOf="@+id/openPokeball"
+            app:layout_constraintStart_toStartOf="@+id/openPokeball"
+            app:layout_constraintTop_toTopOf="@+id/openPokeball" />
+
+        <ImageView
+            android:id="@+id/openPokeball"
+            android:layout_width="316dp"
+            android:layout_height="316dp"
+            android:layout_gravity="center"
+            android:src="@drawable/openpokeball"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/rotateResultTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="10dp"
+            android:fontFamily="@font/dunggeunmo"
+            android:shadowColor="@color/white"
+            android:shadowDx="-1"
+            android:shadowDy="-1"
+            android:shadowRadius="1"
+            android:text=""
+            android:textColor="@color/white"
+
+            android:textSize="30sp"
+
+            app:layout_constraintBottom_toBottomOf="@+id/openPokeball"
+            app:layout_constraintEnd_toEndOf="@+id/openPokeball"
+            app:layout_constraintStart_toStartOf="@+id/openPokeball"
+            app:layout_constraintTop_toTopOf="@+id/openPokeball" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
         android:id="@+id/recommendButton"
         android:layout_width="180dp"
         android:layout_height="60dp"
-        android:layout_marginBottom="116dp"
+        android:layout_marginBottom="88dp"
         android:background="@android:color/transparent"
         android:fontFamily="@font/dunggeunmo"
         android:text="▶︎메뉴    "
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.887"
+        app:layout_constraintHorizontal_bias="0.87"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -106,7 +107,7 @@
         android:layout_width="180dp"
         android:layout_height="60dp"
         android:layout_gravity=""
-        android:layout_marginBottom="56dp"
+        android:layout_marginBottom="28dp"
         android:background="@android:color/transparent"
         android:fontFamily="@font/dunggeunmo"
         android:text="▶︎포켓몬  "
@@ -121,7 +122,7 @@
         android:layout_width="180dp"
         android:layout_height="60dp"
         android:layout_marginRight="300px"
-        android:layout_marginBottom="116dp"
+        android:layout_marginBottom="88dp"
         android:background="@android:color/transparent"
         android:fontFamily="@font/dunggeunmo"
         android:text="▶︎카테고리"
@@ -136,14 +137,14 @@
         android:layout_width="180dp"
         android:layout_height="60dp"
         android:layout_marginLeft="300px"
-        android:layout_marginBottom="56dp"
+        android:layout_marginBottom="28dp"
         android:background="@android:color/transparent"
         android:fontFamily="@font/dunggeunmo"
         android:text="▶︎도망간다"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.774"
+        app:layout_constraintHorizontal_bias="0.744"
         app:layout_constraintStart_toStartOf="parent" />
 
 
