@@ -4,15 +4,18 @@ import android.animation.ObjectAnimator
 import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Bundle
+import android.os.Handler
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.appcompat.widget.AppCompatImageButton
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.bumptech.glide.Glide
 import com.example.madcampweek1.R
 import com.example.madcampweek1.databinding.FragmentMenuRecommendBinding
 import org.json.JSONArray
@@ -35,6 +38,8 @@ class MenuRecommendFragment : Fragment() {
     private var selectedTimeSet: ArrayList<Int> = ArrayList<Int>(List(100) { 0 })
     private var selectIndex = 0
 
+    private var picURL = ""
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -53,23 +58,52 @@ class MenuRecommendFragment : Fragment() {
             // JSON 데이터 가져오기
             getJson("Food.json", foodSet, pickedCategory)
             updateUI()
+            updatePic(picURL)
         }
 
         val confirmButton: AppCompatImageButton = view.findViewById(R.id.confirmButton)
         confirmButton.setOnClickListener {
-            if(selectedTimeSet[selectIndex-1]>10) selectedTimeSet[selectIndex-1]=10
-            else selectedTimeSet[selectIndex-1]+=1
-            // binding.selectedBar.text = selectedTimeSet[selectIndex-1].toString()
-            putStar(selectedTimeSet[selectIndex-1])
+            if (selectIndex-1 < 0) {
+                var confirmWarn = Toast.makeText(requireContext(), "선택 횟수 증가 버튼입니다.\n     먼저 음식을 뽑아주세요", Toast.LENGTH_SHORT)
+                confirmWarn.show()
+                Handler().postDelayed(Runnable {
+                    run(){
+                        confirmWarn.cancel()
+                    }
+                },1000)
+            } else {
+                if(selectedTimeSet[selectIndex-1]>=10) {
+                    Toast.makeText(requireContext(), "선택 횟수는 최대 10번만 가능합니다.", Toast.LENGTH_SHORT).show()
+                    selectedTimeSet[selectIndex-1]=10
+                }
+                else selectedTimeSet[selectIndex-1]+=1
+                putStar(selectedTimeSet[selectIndex-1])
+            }
         }
 
         val resetButton: AppCompatImageButton = view.findViewById(R.id.resetButton)
         resetButton.setOnClickListener{
-            selectedTimeSet[selectIndex-1]=0
-            updateUI()
+            if (selectIndex-1 < 0) {
+                var resetWarn = Toast.makeText(requireContext(), "선택 횟수 초기화 버튼입니다.\n      먼저 음식을 뽑아주세요", Toast.LENGTH_SHORT)
+                resetWarn.show()
+                Handler().postDelayed(Runnable {
+                    run(){
+                        resetWarn.cancel()
+                    }
+                },1000)
+            } else {
+                selectedTimeSet[selectIndex-1]=0
+                putStar(selectedTimeSet[selectIndex-1])
+            }
         }
 
         return binding.root
+    }
+
+    private fun updatePic(url: String) {
+        Glide.with(requireContext())
+            .load(url)
+            .into(binding.foodPic)
     }
 
     private fun putStar(time:Int) {
@@ -77,7 +111,8 @@ class MenuRecommendFragment : Fragment() {
         repeat(time) {
             star.append("★")
         }
-        binding.selected.text = star
+        if (selectedTimeSet[selectIndex-1]==0) binding.selected.text ="한 번도 선택하지 않았습니다!"
+        else binding.selected.text = star
     }
 
     private fun updateUI() {
@@ -91,10 +126,12 @@ class MenuRecommendFragment : Fragment() {
         binding.type.text = resultList[3]
 
         selectIndex = resultList[1].toInt()
-        if (selectedTimeSet[selectIndex-1]==0) binding.selected.text ="한 번도 선택하지 않았습니다!"
-        else putStar(selectedTimeSet[selectIndex-1])
+        putStar(selectedTimeSet[selectIndex-1])
 
         binding.comment.text = resultList[2]
+
+        picURL = resultList[4]
+        updatePic(picURL)
 
         val imageView:ImageView = binding.imageView
         val backView:ImageView = binding.imageViewBackground

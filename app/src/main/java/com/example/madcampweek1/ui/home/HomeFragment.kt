@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.SearchView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -24,6 +25,7 @@ class HomeFragment : Fragment() {
     private val binding get() = _binding!!
 
     private var phoneNumberSet = ArrayList<String>()
+    private lateinit var filteredPhoneNumberSet: ArrayList<String>
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -35,6 +37,7 @@ class HomeFragment : Fragment() {
 
         // JSON 데이터 가져오기
         getJson("Number.json", phoneNumberSet)
+        filteredPhoneNumberSet = ArrayList(phoneNumberSet)
 
         // RecyclerView 설정
         val recyclerView: RecyclerView = binding.recyclerView
@@ -44,15 +47,51 @@ class HomeFragment : Fragment() {
         val customAdapter = CustomAdapter(phoneNumberSet)
         recyclerView.adapter = customAdapter
 
+        initSearchView()
+
         return root
     }
 
+    private fun initSearchView() {
+        // init SearchView
+        binding.search.isSubmitButtonEnabled = true
+        binding.search.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
+            androidx.appcompat.widget.SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                filterData(newText)
+                return true
+            }
+        })
+    }
+
+    private fun filterData(query: String?) {
+        if (query.isNullOrBlank()) {
+            // If the query is empty, show the original data
+            filteredPhoneNumberSet.clear()
+            filteredPhoneNumberSet.addAll(phoneNumberSet)
+        } else {
+            // Filter the data based on the "name" field
+            filteredPhoneNumberSet.clear()
+            for (entry in phoneNumberSet) {
+                val name = entry.split(",")[0]
+                if (name.contains(query, ignoreCase = true)) {
+                    filteredPhoneNumberSet.add(entry)
+                }
+            }
+        }
+        // Update the RecyclerView with the filtered data
+        (binding.recyclerView.adapter as CustomAdapter).updateData(filteredPhoneNumberSet)
+    }
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
 
-    public fun getJson(filename: String, result: ArrayList<String>) {
+    private fun getJson(filename: String, result: ArrayList<String>) {
         try {
 
             result.clear()
