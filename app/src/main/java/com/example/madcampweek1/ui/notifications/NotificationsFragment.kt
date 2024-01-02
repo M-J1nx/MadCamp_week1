@@ -34,11 +34,11 @@ class NotificationsFragment : Fragment() {
 
         _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
         val root: View = binding.root
-
 //        val textView: TextView = binding.textNotifications
 //        notificationsViewModel.text.observe(viewLifecycleOwner) {
 //            textView.text = it
 //        }
+        binding.rotateResultTv.bringToFront()
 
         val recommendButton: Button = root.findViewById(R.id.recommendButton)
         recommendButton.setOnClickListener {
@@ -78,9 +78,9 @@ class NotificationsFragment : Fragment() {
     }
 
     fun recommendFood() {
-
+        binding.rotateResultTv.text = ""
+        binding.additionalButton.visibility=View.GONE
         val transaction = requireActivity().supportFragmentManager.beginTransaction()
-
         transaction.replace(R.id.notificationContainer, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
@@ -89,15 +89,18 @@ class NotificationsFragment : Fragment() {
     fun rotateRoulette() {
         val rotateListener = object: FoodRoulette.RotateListener {
             override fun onRotateStart() {
-                binding.rotateResultTv.text = "오늘 먹을 음식의 카테고리는? : "
+                binding.rotateResultTv.text = ""
+                binding.openPokeball.visibility= View.INVISIBLE
             }
 
             override fun onRotateEnd(pickedCategory: String) {
-                binding.rotateResultTv.text = "오늘 먹을 음식의 카테고리는? : $pickedCategory"
+                binding.rotateResultTv.text = "$pickedCategory"
 
                 val bundle = Bundle()
                 bundle.putString("pickedCategory", pickedCategory)
                 fragment.arguments = bundle
+                binding.openPokeball.visibility= View.VISIBLE
+
             }
         }
 
@@ -107,5 +110,7 @@ class NotificationsFragment : Fragment() {
 
     fun resetRoulette() {
         binding.roulette.rotateRoulette(0.0F, 1000, null)
+        binding.openPokeball.visibility= View.INVISIBLE
+        binding.rotateResultTv.text = ""
     }
 }

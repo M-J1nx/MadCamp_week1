@@ -47,7 +47,7 @@ class MenuRecommendFragment : Fragment() {
         val pickedCategory = arguments?.getString("pickedCategory")
 
 
-        val menuRecommend: AppCompatImageButton = view.findViewById(R.id.recommendMimikyu)
+        val menuRecommend: AppCompatImageButton = view.findViewById(R.id.recommend)
         menuRecommend.setOnClickListener {
 
             // JSON 데이터 가져오기
@@ -57,7 +57,8 @@ class MenuRecommendFragment : Fragment() {
 
         val confirmButton: AppCompatImageButton = view.findViewById(R.id.confirmButton)
         confirmButton.setOnClickListener {
-            selectedTimeSet[selectIndex-1]+=1
+            if(selectedTimeSet[selectIndex-1]>10) selectedTimeSet[selectIndex-1]=10
+            else selectedTimeSet[selectIndex-1]+=1
             // binding.selectedBar.text = selectedTimeSet[selectIndex-1].toString()
             putStar(selectedTimeSet[selectIndex-1])
         }
@@ -65,6 +66,7 @@ class MenuRecommendFragment : Fragment() {
         val resetButton: AppCompatImageButton = view.findViewById(R.id.resetButton)
         resetButton.setOnClickListener{
             selectedTimeSet[selectIndex-1]=0
+            updateUI()
         }
 
         return binding.root
@@ -75,7 +77,7 @@ class MenuRecommendFragment : Fragment() {
         repeat(time) {
             star.append("★")
         }
-        binding.selectedBar.text = star
+        binding.selected.text = star
     }
 
     private fun updateUI() {
@@ -89,7 +91,7 @@ class MenuRecommendFragment : Fragment() {
         binding.type.text = resultList[3]
 
         selectIndex = resultList[1].toInt()
-        if (selectedTimeSet[selectIndex-1]==0) binding.selectedBar.text ="아직 한 번도 선택하지 않았습니다!"
+        if (selectedTimeSet[selectIndex-1]==0) binding.selected.text ="한 번도 선택하지 않았습니다!"
         else putStar(selectedTimeSet[selectIndex-1])
 
         binding.comment.text = resultList[2]
@@ -115,9 +117,11 @@ class MenuRecommendFragment : Fragment() {
             }
             "분식" -> {
                 imageView.setImageResource(R.drawable.instant_food)
+                backView.setImageResource(R.drawable.instant_background)
             }
             "간편식" -> {
                 imageView.setImageResource(R.drawable.snackbar_food)
+                backView.setImageResource(R.drawable.snackbar_background)
             }
         }
     }
