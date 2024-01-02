@@ -155,7 +155,7 @@
                 android:id="@+id/typeBar"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 app:cardCornerRadius="20dp"
@@ -338,9 +338,10 @@
 
                     <TextView
                         android:id="@+id/comment"
-                        android:layout_width="340dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
                         android:layout_marginTop="10dp"
                         android:elevation="10dp"
                         android:text=""

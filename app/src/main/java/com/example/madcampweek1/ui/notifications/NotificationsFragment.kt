@@ -2,6 +2,8 @@ package com.example.madcampweek1.ui.notifications
 
 import android.animation.ObjectAnimator
 import android.animation.ValueAnimator
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log
@@ -74,6 +76,12 @@ class NotificationsFragment : Fragment() {
         val resetButton: Button = root.findViewById(R.id.resetButton)
         resetButton.setOnClickListener {
             resetRoulette()
+        }
+
+        val additionalButton: Button = root.findViewById(R.id.additionalButton)
+        additionalButton.setOnClickListener {
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.pokemon.com/us"))
+            startActivity(browserIntent)
         }
 
         return root
