@@ -5,62 +5,72 @@
       {
         "name": "비빔밥",
         "select": 1,
-        "comment": "매운 비빔밥",
-        "c": "한식"
+        "comment": "비빔밥은 밥에 각종 나물을 넣고, 장을 넣어서 비벼 먹는 전통 한국 요리로, 오늘날에는 육류를 같이 넣는 것이 선호되기도 한다.",
+        "c": "한식",
+        "url" : "https://i.namu.wiki/i/dgjXU86ae29hDSCza-L0GZlFt3T9lRx1Ug9cKtqWSzMzs7Cd0CN2SzyLFEJcHVFviKcxAlIwxcllT9s2sck0RA.jpg"
       },
       {
         "name": "김치찌개",
         "select": 2,
-        "comment": "김치의 맛이 일품인 찌개",
-        "c": "한식"
+        "comment": "김치찌개는 대표적인 한국의 전통 음식 중 하나로, 감칠맛 나는 김치와 다양한 재료들이 어우러져 만들어지는 감칠맛이 풍부한 찌개입니다. ",
+        "c": "한식",
+        "url" : "https://static.wtable.co.kr/image-resize/production/service/recipe/291/4x3/a2421dff-e56c-40bd-8b40-06a91fc000a9.jpg"
       },
       {
         "name": "된장찌개",
         "select": 3,
-        "comment": "된장의 깊은 풍미가 느껴지는 찌개",
-        "c": "한식"
+        "comment": "된장찌개는 한국의 전통 음식 중 하나로, 강력한 맛과 향이 특징인 찌개입니다. 주 재료로 사용되는 된장(된장은 대두와 염을 발효시켜 만든 재료)이 특유의 진한 맛을 내며, 각종 야채와 돼지고기를 함께 넣어 끓여내어 만듭니다.",
+        "c": "한식",
+        "url" : "https://recipe1.ezmember.co.kr/cache/recipe/2023/07/06/6d636a7976e5afb6d0050d167eb39fe01.jpg"
       },
       {
         "name": "불고기덮밥",
         "select": 4,
-        "comment": "간장 소스로 맛있게 불고기를 덮은 밥",
-        "c": "한식"
+        "comment": "불고기 덮밥은 한국의 대표적인 덮밥 요리 중 하나로, 소고기를 달콤하고 매운 양념으로 조리하여 밥 위에 얹어 먹는 음식입니다.",
+        "c": "한식",
+        "url" : "https://m.cj.co.kr/images/theKitchen/PHON/0000000834/0000001212/0000000834.jpg"
       },
       {
         "name": "국밥",
         "select": 5,
-        "comment": "푸짐하고 감칠맛 나는 국밥",
-        "c": "한식"
+        "comment": "국밥은 한국의 전통적인 음식으로, 국물이 들어간 밥 요리를 일컫습니다. 주로 각 지방마다 특색 있는 국밥이 존재하며, 대표적인 국밥으로는 설렁탕, 삼계탕, 순대국밥, 북경오리국밥 등이 있습니다. ",
+        "c": "한식",
+        "url" : "https://i0.wp.com/shinpapa.co.kr/wp-content/uploads/2023/03/image-10.png?resize=819%2C716&ssl=1"
       },
       {
         "name": "청국장",
         "select": 6,
-        "comment": "청국장의 특유의 풍미가 느껴지는 국",
-        "c": "한식"
+        "comment": "청국장(淸豆醬)은 대표적인 한국의 발효된 대두장 중 하나로, 강력한 향과 풍부한 맛이 특징입니다. 다양한 고추장과 함께 사용되는데, 국내에서는 물론이고 해외에서도 인기 있는 장류 중 하나입니다.",
+        "c": "한식",
+        "url" : "https://i.namu.wiki/i/3qedVDUXrVRBfebeOmWPA385p3LQXaurvLDfVbUy5eFotcoIqXFqM0ukvDXn1T3RQsCyRmYPoMcAO95WTbe2qQ.webp"
       },
       {
         "name": "미역국",
         "select": 7,
-        "comment": "미역의 담백한 맛이 일품인 국",
-        "c": "한식"
+        "comment": "미역국은 한국의 전통적인 국물 요리 중 하나로, 건조된 미역을 사용하여 만들어지는 해조류 국물입니다. 간단하면서도 건강에 좋은 음식으로 알려져 있습니다",
+        "c": "한식",
+        "url" : "https://i.namu.wiki/i/gRYEv1mYsL0dRPEZheEF6R0nbu4QLoD3bb36HdRRP6Z-CP4yaU9x8GzJ7MK4NJMeogQPeiA495smmsAYwRha7g.webp"
       },
       {
         "name": "삼겹살",
         "select": 8,
-        "comment": "신선하고 쫄깃한 삼겹살",
-        "c": "한식"
+        "comment": "삽겹살은 한국 요리에서 매우 인기 있는 고기 요리 중 하나입니다. 이 요리는 돼지 목덜미에서 나오는 부위인 삽겹에 해당하는 부분을 사용하여 만들어집니다. ",
+        "c": "한식",
+        "url" : "https://i.namu.wiki/i/oFHlYDjoEh8f-cc3lNK9jAemRkbXxNGwUg7XiW5LGS6DF1P2x8GCeNQxbQhVIwtUS1u53YPw-uoyqpmLtrGNJA.webp"
       },
       {
         "name": "잡채",
         "select": 9,
-        "comment": "채소와 육수의 맛이 어우러진 전통 음식",
-        "c": "한식"
+        "comment": "잡채(Japchae)는 한국의 전통 음식으로, 육수에 찌는 것이 아니라 삶은 후 식초, 간장, 설탕 등으로 양념한 다음 잘게 썬 채소와 함께 볶아 만든 요리입니다.",
+        "c": "한식",
+        "url" : "https://recipe1.ezmember.co.kr/cache/recipe/2019/01/20/279bcc617e8d0f3a9633ba9c7f4e47981.jpg"
       },
       {
-        "name": "곱창볶음",
+        "name": "곱창",
         "select": 10,
-        "comment": "담백하고 맛있는 곱창 볶음요리",
-        "c": "한식"
+        "comment": "곱창은 한국에서 주로 술과 함께 즐기는 안주로 알려져 있습니다. 곱창은 대개 숯불이나 화로에서 구워내며, 구워진 곱창은 부드럽고 고소한 맛이 돋보입니다.",
+        "c": "한식",
+        "url" : "https://cdn.011st.com/11dims/resize/600x600/quality/75/11src/product/5588883005/B.jpg?643000000"
       }
     ]
   },
@@ -70,62 +80,72 @@
       {
         "name": "짜장면",
         "select": 11,
-        "comment": "달콤하고 고소한 중국식 면요리",
-        "c": "중식"
+        "comment": "짜장면(Jjajangmyeon)은 중국의 차슈잡채(炸酱面)에서 영감을 받아 발전한 대표적인 중화요리 중 하나로, 한국에서는 중국식 면 요리 중 가장 인기 있는 음식 중 하나입니다.",
+        "c": "중식",
+        "url" : "https://i.namu.wiki/i/zLCSMHVvvt9_ZJyb33kImeEfmrBewsgNll9AyPyVcyNNX2frg1svs7I-nrm-seExLN7BcJ__RJMJCGKDIUkgPg.webp"
       },
       {
         "name": "짬뽕",
         "select": 12,
-        "comment": "매콤하고 시원한 해물 스프와 면요리",
-        "c": "중식"
+        "comment": "짬뽕(Jjamppong)은 중화요리의 일종으로, 해물과 면이 어우러진 매운 국물 요리입니다. ",
+        "c": "중식",
+        "url" : "https://img-cf.kurly.com/shop/data/goodsview/20230530/gv00000700462_1.jpg"
       },
       {
         "name": "탕수육",
         "select": 13,
-        "comment": "고기를 튀겨 냉채로 내는 중국식 요리",
-        "c": "중식"
+        "comment": "탕수육은 고기를 튀겨 구워서 만든 요리로, 일반적으로 돼지고기나 소고기 등을 사용합니다. 이 고기는 부드럽고 바삭한 외부의 튀김 옷과 함께 제공되며, 특별한 소스로 즐겨 먹습니다.",
+        "c": "중식",
+        "url" : "https://i.namu.wiki/i/NSZu9w4DRwEPOCgPSzvs4sAZlxfMBoxZLCZQgM_O4wRH8jN0guRfBiLURu-Tno5p-Q2aw5e5gy9gLJsnYKlq8Q.webp"
       },
       {
         "name": "양장피",
         "select": 14,
-        "comment": "특제 소스로 맛을 낸 중국식 탕수육",
-        "c": "중식"
+        "comment": "양장피(Yangjangpi)는 중국의 가지요리인 \"涼拌肚絲 (liángbàn dùsī)\"에서 영감을 받아 한국에서 발전한 요리로, 차가운 면에 채소와 돼지고기를 넣고 특별한 양념장으로 맛을 낸 요리입니다.",
+        "c": "중식",
+        "url" : "https://recipe1.ezmember.co.kr/cache/recipe/2015/10/29/fd45f1d09dba6667ebd8316d5f7886d4.jpg"
       },
       {
         "name": "마라탕",
         "select": 15,
-        "comment": "마라 소스로 맛을 낸 중국식 스프요리",
-        "c": "중식"
+        "comment": "마라탕은 중국의 쓰촨성에서 기원하여 둥베이 지방을 거쳐 만들어진 중국 요리이다. 다양한 향신료를 사용하여 혀가 얼얼하면서도 매운맛이 특징이다. 마라탕에는 의외로 같은 매운맛을 느끼게 해주는 물질인 캡사이신 함유량이 하이드록시 알파 산쇼올보다 적다.",
+        "c": "중식",
+        "url" : "https://i.namu.wiki/i/qFWfOHBd0mx7NmNquwtaSbUjnPumXpk5oi1jxNKpWUsv_eGJe44xm9AePkbhQ6hIxTjMtroFaOFPbhBy0MSbNQ.webp"
       },
       {
         "name": "짬뽕밥",
         "select": 16,
-        "comment": "짬뽕의 맛을 즐길 수 있는 밥 요리",
-        "c": "중식"
+        "comment": "짬뽕에서 면을 뺀 짬뽕국물을 밥과 같이 먹는 요리. 사실상 일종의 국밥으로 짬뽕국밥이라 해도 무방하다. 어떤 중국집은 아예 짬뽕밥을 국밥으로 팔기도 한다. 가게에 따라서 삶은 당면을 넣어주는 곳도 있다.",
+        "c": "중식",
+        "url" : "https://i.namu.wiki/i/wmcbV74osBlrZBFc8zEliOqLYzabPhxNmYq9pG4XVNcvDWWqKpn_oX4ulp-e44ydcQKlOsDfTulSEGfMiZboOc5xZ_YFQtwXQxCX0H_1ihGdRXScguWLJShACxdLKJ0dKNpnGa3iwX_l-bSagdlPVQ.webp"
       },
       {
-        "name": "볶음밥",
+        "name": "차오판",
         "select": 17,
-        "comment": "쌀밥과 각종 재료를 볶아 만든 중식 요리",
-        "c": "중식"
+        "comment": "차오판(炒饭)은 '중국식 볶음밥' 을 뜻하는 말이다. 세계 각지에 퍼진 중화 요리 중에서도 가장 기본에 충실한 요리이자,[1] 길거리 포장마차 요리를 하더라도 무조건 마스터해야하는 대표적인 메뉴다. ",
+        "c": "중식",
+        "url" : "https://i.namu.wiki/i/h_SV6rG7sNHUeZ8AtYNwv2DEb-3DA3QawRICdUF3wBAOlEpInryYgriSZmwGurVY5oq7xhTb9d-A9rWw_f-gs16ZUTxQUK8hjnpbNhaclYSjTGVbYf9lCtYmjMwvITI-9dcoOQtV6yW3Rui98T_nCg.webp"
       },
       {
         "name": "군만두",
         "select": 18,
-        "comment": "특제 소스로 만든 고기만두",
-        "c": "중식"
+        "comment": "얇은 만두피에 고기, 부추, 당면 등을 넣어 감싼 후 기름에 구워서 먹는 요리. 일반적으로 굽는 방식과는 다르게 웍에 튀기듯이 굽기 때문에 튀김만두라는 이름이 더 적절한 듯 하지만... 덕분에 완전히 바삭바삭한 느낌을 즐길 수 있다. ",
+        "c": "중식",
+        "url" : "https://i.namu.wiki/i/LhFDJAWOaudG8qSkKODW3lc3ISME68Vi1W2f0ro6COq7xVr7UNb-s1E0_bRcMbr5jfvebmrTGNA-JUDkanUugAQrzshB35y9Nbmbo_IlGUT_gah6sbZj8WUPKBoT2SEREkW98EXXB3dsVVsjZlPqBA.webp"
       },
       {
         "name": "양꼬치",
         "select": 19,
-        "comment": "양고기를 꼬치로 구워낸 요리",
-        "c": "중식"
+        "comment": "양고기를 꼬치로 구워낸 요리. 살코기와 비계를 번갈아 끼워서 만드는데, 한국인 중에서는 비계를 빼고 먹는 사람이 종종 있으나 고기와 비계가 잘 섞여 있는 것이 더 고소하고 맛이 있다고 하며, 비계를 더 선호하는 사람들도 있다.",
+        "c": "중식",
+        "url" : "https://i.namu.wiki/i/_n5OfoKICG1XqJ93mroE_esb9-v4VNZkSxRbITgy7PEvCVS_4rLs_ie6l1fo4t_C1w_jVgx-rKflrJP3tWy1UIHRy0BNBO6cuLWiixF58_7fjHKo5SspsS-S-hskpDjihXhKvbDTQiK5TrPMBMKqQQ.webp"
       },
       {
-        "name": "쟁반짜장",
+        "name": "짬짜면",
         "select": 20,
-        "comment": "짜장면과 짬뽕이 한 그릇에",
-        "c": "중식"
+        "comment": "말 그대로 짜장면과 짬뽕을 같이 담은 음식. 가운데 칸막이가 있는 그릇에 한쪽은 짜장면, 반대쪽은 짬뽕을 넣어 둘 다 먹을 수 있다. 3칸막이 등 변형품도 존재한다.",
+        "c": "중식",
+        "url" : "https://i.namu.wiki/i/fGTGma4ZlP9Jdo31Lcw5nFLJFvOvHy1NvMuaxzWqVPmQbzSu1f-fVFaIUd1kQMyjlL5Z5w2lCZZjwso_PFsLctEsg8LZjrR9_C9P3jvYZA6vd6ga-V15QMDjqV-taaueSI94Mie9kW8j2d98IzXwzw.webp"
       }
     ]
   },
@@ -135,62 +155,72 @@
       {
         "name": "초밥",
         "select": 21,
-        "comment": "신선한 회를 밥 위에 올린 일본식 요리",
-        "c": "일식"
+        "comment": "일본 요리의 하나로, 어패류(수산물)의 살이나 유부·달걀·김 등의 식재료를 배합초에 절인 쌀밥 위에 올려 만드는 음식이다.스시는 가열하지 않은 날생선(회)를 재료로 얹어 만드는 것이 일반적이지만, 그 외에도 익힌 식재나 육류, 식물성 재료 등 여러 가지를 기호에 맞게 얹어 만들 수 있다.",
+        "c": "일식",
+        "url" : "https://i.namu.wiki/i/xpXf2q-4FndNi3ylGGEeAnUKiUa9Qt7_SbypUU55faDwCmaZPIFzeOURa7tXYhuJUmGN1xZTm3GxNbkrLWmW6mRGMmHb8jOWnaz9UIjGeQrHF8cL3xG7OCKutWdLw4E5b2mZwSh0zl8w1t0yqeFlmw.webp"
       },
       {
-        "name": "덮밥",
+        "name": "돈부리",
         "select": 22,
-        "comment": "밥 위에 다양한 재료를 올린 요리",
-        "c": "일식"
+        "comment": "큰 그릇에 밥을 담고 그 위에 요리를 얹은 뒤 소스로 간을 조절하면서 먹는 일본식 덮밥이다. 밥 위에 얹는 요리의 종류에 따라 덮밥의 이름이 붙는다.일본에서는 대중적인 요리로 값싸게 먹을수 있는 외식으로 취급 받는다. 직장인들이나 대학생들이 아침에 직장이나 학교로 가는 길에 사먹는 경우도 많다.",
+        "c": "일식",
+        "url" : "https://i.namu.wiki/i/WIMz5wwvNjjyVZFQjcCQDxo-kYmS3qdKv188P3RqlSNLaQLDQI7RWpPk1e6UgjAi-IHnWD8qyA6-eiYy0UyurgrZbupKKlK4Pvj3n8Z-TONDTOxk5aKkOh08TxCHpxzSRqWmTSKCg1xWu497WHrMxw.webp"
       },
       {
         "name": "라멘",
         "select": 23,
-        "comment": "일본식 스프와 함께 나오는 면요리",
-        "c": "일식"
+        "comment": "라멘(ラーメン, Ramen)은 중국의 수타 탕면인 라몐(拉面)이 일본에서 현지화되어 만들어진 일본식 중화 요리이다. 중화 요리로 시작해서 인기를 얻은 면요리라는 점에서 한국의 짜장면과 유사한 측면이 있다.",
+        "c": "일식",
+        "url" : "https://rimage.gnst.jp/livejapan.com/public/article/detail/a/00/00/a0000352/img/basic/a0000352_main.jpg"
       },
       {
         "name": "소바",
         "select": 24,
-        "comment": "밀가루로 만든 일본식 국수",
-        "c": "일식"
+        "comment": "일본식으로 조리된 메밀국수.일본에서는 우동, 라멘과 함께 대단히 대중적인 면 요리로, 차갑게 소스에 찍어서 먹는 냉모밀(자루소바) 외에도 온면(가케소바) 등 여러 가지 종류가 있다. 일본에서는 전문점이 아닌 일상적인 식당 레벨에서는 같은 국물에 면발을 뭐로 하느냐에 따라 소바와 우동을 나누는 식으로 우동과 호환되는 음식이라는 인식이 강하다.",
+        "c": "일식",
+        "url" : "https://i.namu.wiki/i/m0OptJgCVVKLcf-bvb5gvtWDIWBSgOOqgzzrgmWDU136hDlTFulvnNFSjbb-zcr5CFy4RYQbZUCPTGOE8HhOuOkt-W2p-Qj7PxsFX_kMOEeVjuhAGQvdtrkvB3vnjR62K_WBoxp17kSx83bJsw1bgQ.webp"
       },
       {
         "name": "우동",
         "select": 25,
-        "comment": "국물이 있는 국수 요리",
-        "c": "일식"
+        "comment": "우동(うどん)은 밀면으로 만드는 일본 면 요리의 한 종류로, 일반적으로 두껍고 탄력 있는 생면을 국물에 곁들이거나 배합 소스에 찍어 먹는다. 다양한 레시피와 단순한 조리법으로 일본에서 가장 대중적인 면 요리의 하나로 꼽힌다.",
+        "c": "일식",
+        "url" : "https://i.namu.wiki/i/RR6O9oz_oYxnifiNA4eHTSVVr5vUwJEwn2lHAuL8Lh1z_OphWCs4CNko8NF-Ym2pUd8ff1zrrtdqFQ7sHFJzOHSpItBQexB7f5gi3w4g0ucDyxANYbqnVlwikXU9_e77630bn3WFLf1sdKP9DDHt-Q.webp"
       },
       {
         "name": "텐동",
         "select": 26,
-        "comment": "튀김을 밥 위에 얹은 요리",
-        "c": "일식"
+        "comment": "일본식 덴푸라를 올린 덮밥이다. 올라가는 튀김 종류는 주로 새우, 단호박, 오징어, 가지, 연근, 꽈리고추, 붕장어, 온천달걀, 김, 모듬 야채 등이 있다. 대개 튀김이 덮이는 작은 그릇이 얹어져 나오는데, 이 그릇에 튀김을 덜어가며 먹는다. ",
+        "c": "일식",
+        "url" : "https://i.namu.wiki/i/D1e5uSCKBqMlBHj1aTO_7JDqrhXNanpGcoGrL0nLOvPqAby_N5zv6nk2HV1LooWOvdZZ_V6kkFWHLb5SHmOQWxlCykvn7HvhzLqH6_qXxHByS_-kp4OgsMaBERVOz9sGfdgx97gYa9Zf9EPt7iVl2A.webp"
       },
       {
         "name": "오코노미야끼",
         "select": 27,
-        "comment": "밀가루 반죽에 다양한 재료를 넣어 구운 일본식 팬케이크",
-        "c": "일식"
+        "comment": "밀가루를 가쓰오부시 우린 물에 개어 잘게 썬 양배추를 섞은 후 취향 따라 각종 재료를 넣고 지져 먹는 일본 요리. 이름 자체가 '좋아하는 것(오코노미)+구이(야키)'라서 들어가는 재료는 딱히 정해져 있지 않다.",
+        "c": "일식",
+        "url" : "https://i.namu.wiki/i/6q86KTDRnruRlTF3vsCYT3C12yX-oX77f4iTKjpFbOqklRQVIAxoWkn-rZuQRMiepHaQSB3wJXkNQNz3YtzxyEYg1iS90J98MSisJ-1HS0bzQXP7h22yDKO7p3hRayLom_PvbQRfhAcOo5ESag3DDQ.webp"
       },
       {
         "name": "샤브샤브",
         "select": 28,
-        "comment": "떠먹는 냉채 국물 속에 고기와 채소를 삶아먹는 일본식 요리",
-        "c": "일식"
+        "comment": "얇게 저민 쇠고기와 갖가지 채소를 끓는 육수에 즉석에서 데쳐서 양념장에 찍어 먹는 요리. 육류를 사용하는 몇 안 되는 일본 요리이기도 하다. 닭고기, 돼지고기 등 다른 육류를 쓰기도 하며, 해물 샤브샤브 등 육류가 아닌 주재료를 사용한 메뉴도 판매되고 있다.",
+        "c": "일식",
+        "url" : "https://i.namu.wiki/i/GIhyywJxOiAStizstRjXfY07kl1u0tc00XjfcJy4FmXlMX4HAezI3NUL6ZwaNHxtEGSemvAxBPpMUeHgqrsOgLrMXMI6Zqu-BXczWE--yMgxWmeoQozHwVrfUeJFAM1bIGxly3JBwVrZPtPRjf1fNw.webp"
       },
       {
-        "name": "캐비아 초밥",
+        "name": "규카츠",
         "select": 29,
         "comment": "고급진 맛의 캐비아를 초밥으로 즐기는 요리",
-        "c": "일식"
+        "c": "일식",
+        "url" : "목차 1번을 뜻하는 나베에 각종 재료를 넣고 푹 삶아 끓인 요리인 '나베 요리(鍋料理, 나베료리)'를 줄여서 그냥 '나베'라고 부르기도 한다. 한국의 전골과 비슷한 요리이다. 스키야키와 샤브샤브, 밀푀유나베가 유명한 편이다."
       },
       {
         "name": "나베",
         "select": 30,
-        "comment": "일본식 냄비 음식",
-        "c": "일식"
+        "comment": "목차 1번을 뜻하는 나베에 각종 재료를 넣고 푹 삶아 끓인 요리인 '나베 요리(鍋料理, 나베료리)'를 줄여서 그냥 '나베'라고 부르기도 한다. 한국의 전골과 비슷한 요리이다. 스키야키와 샤브샤브, 밀푀유나베가 유명한 편이다.",
+        "c": "일식",
+        "url" : "https://i.namu.wiki/i/e21ukPDjqznbmxJAF5v1jPO8j-fIr1Mz4R7GSmMcghf-DQagvPOLojq8HFiJIuqainOR9IJ9cY7KsumGgTyNeNXZC7k-82qvBkLu-p8uiIUsn2-mbezt1A9e0pdvbJkIQAx9ylFFnpnZzQvhJAAIXw.webp"
       }
     ]
   },
@@ -200,62 +230,72 @@
       {
         "name": "스테이크",
         "select": 31,
-        "comment": "고기를 구워 부드럽게 만든 요리",
-        "c": "양식"
+        "comment": "고기를 근섬유를 가로지르는 방향으로 자른 고기 조각, 또는 그것을 굽거나 튀긴 요리. 예외적으로 근섬유와 나란하게 자른 컷도 존재한다.",
+        "c": "양식",
+        "url" : "https://i.namu.wiki/i/VwBKeFxccUlEZJXgPCQGEVwdmGoiyXUvofhfikkRpeMpS4MmXn2ovH-yJDB92xx6aKDri_P0K4ortmdXGmWTxNg0Fs6fBTY90aCKLjaZalQ2rBBL2Rl_r2tLQuU2nQ5yb11IG1-_TTFn-6MU7DEDeA.webp"
       },
       {
         "name": "파스타",
         "select": 32,
-        "comment": "이탈리아의 대표적인 면 요리",
-        "c": "양식"
+        "comment": "파스타(pasta)는 물과 듀럼밀 세몰리나를 반죽하여 만드는 이탈리아의 면과 이를 이용한 음식 전반을 일컫는 말이다. ",
+        "c": "양식",
+        "url" : "https://i.namu.wiki/i/CdIc0vM9IxAtfhPwJJI3MEGXTFtMC-cKmIaOOF9WZsq6mI3fMESxxC8olKPIigtM_5aNt-rTtx5vXVTmCL39U0aN05I6Bo1ysnqTtk2gOsksPtBQPwbuHceXHBusTWB3YhUL9-EKA1pmaFM3XSEvMQ.webp"
       },
       {
         "name": "피자",
         "select": 33,
-        "comment": "도우 위에 토핑을 얹고 구워 만든 이탈리아식 음식",
-        "c": "양식"
+        "comment": "피자(pizza)는 밀가루로 만든 얇고 납작한 반죽에 토마토소스와 치즈 등 토핑을 얹어서 구워 내는 이탈리아에서 시작한 요리이다. ",
+        "c": "양식",
+        "url" : "https://i.namu.wiki/i/pMc5GcyVeRDtmOOlFRnD-73gY0FK_cX5bASpTfO9rClz8XcK2Ql7S4iMbIjpBbr1VD7KDIjtIERe4FozDOD7-TFcCAw-B2cz_mCiviMbAyWaFaydwIKG4DClfQYEmWc0wAoi0v3ZkDeiaGmhC3u4jQ.webp"
       },
       {
-        "name": "버거",
+        "name": "햄버거",
         "select": 34,
-        "comment": "고기 패티와 다양한 토핑을 넣은 케이크 형태의 음식",
-        "c": "양식"
+        "comment": "패티를 구운 후 다양한 부재료와 함께 빵 사이에 끼워 먹는 음식이다. 전세계에서 가장 유명한 미국 요리이자 세계화의 바이블급 인지도를 자랑하는 넘버원 패스트푸드로, 세계로 퍼지는 과정에서 각종 문화가 뒤섞이다보니 이것을 바탕으로 만든 온갖 바리에이션 음식들이 등장했다.",
+        "c": "양식",
+        "url": "https://i.namu.wiki/i/shcyhBPgZxVYxLyLt0i_bt-AE0bVQ8kPLaRw6Y0vmudvnKG6JzOEAUiy-dhgWn2GqwRjqNu1ef02K5D-nSTUn8tWctAPDNqgdBxCTTmy3F_PYLF-SU3L6dnd5wRErbHn3_xTRRP1Dzpjh6PYQG0eGQ.webp"
       },
       {
         "name": "샐러드",
         "select": 35,
-        "comment": "다양한 신선한 채소와 드레싱을 사용한 음식",
-        "c": "양식"
+        "comment": "다양한 식자재를 사용하여 양념에 버무린 음식.초창기의 샐러드는 매우 단순히 야채에 소금만 친 음식이었다. ",
+        "c": "양식",
+        "url" : "https://i.namu.wiki/i/YNHB5Wz-svxaCgg3rS3PR2275Zwrb24Fn8MiUNUn3-xqy0PHs12oFNTypuArCkm-f7VlSenEkanmJ1l-fcSnuR0JHaktf29_RWlIBBgklQ30u9XIi2janYFmuXCa-Fpyt4dYk1Ml7MfUsDAhoURjfA.webp"
       },
       {
         "name": "리조또",
         "select": 36,
-        "comment": "이탈리아식 쌀 요리",
-        "c": "양식"
+        "comment": "이탈리아식 쌀 요리. 쌀이 깨지거나 으스러지지 않은 상태에서 겉표면의 전분기만 나오게끔 저어주어야 제대로 된 리조또이기 때문에, 요리 하는 내내 살살 휘저어주어야 한다.",
+        "c": "양식",
+        "url" : "https://eapp-cdn.emart.com/recipe/recipeBook/20230609/f015966c-6ec7-4a15-8396-0e603ae67b83.jpg"
       },
       {
         "name": "그라탕",
         "select": 37,
-        "comment": "오븐에서 음식을 구워 표면을 바삭하게 만든 요리",
-        "c": "양식"
+        "comment": "오븐용 접시에 어류, 육류, 계란, 야채, 파스타 중 몇몇 재료를 섞어서, 소스와 함께 담아내어 그 위에 치즈와 빵가루를 뿌려 오븐에서 구워낸 요리이다.",
+        "c": "양식",
+        "url" : "https://i.namu.wiki/i/Gs-SI6lVYU5M1yZRjrGuR7FpjCrY41NkBWtBIxdDxX53Oo0STQDHDWGfke8bRPJnVvBdJR1RHkIxwj8Up7LNmLCnz-EaEug_nB066-r_TgOJi5F2lt5-RTR811MZI2Q8xR8h3ZXRGNirO6PMLafZ8A.webp"
       },
       {
         "name": "스프",
         "select": 38,
-        "comment": "물 또는 육수를 기반으로 하는 끓인 음식",
-        "c": "양식"
+        "comment": "육수, 혹은 스톡 따위를 넣고 끓인 국물에 건더기와 양념을 더한 요리. 유럽 요리의 국이라 볼 수 있다. 한국에서는 '스프'라고도 한다.",
+        "c": "양식",
+        "url" : "https://i.namu.wiki/i/h75_JAUJe1BDKIaNrT-jJIX_KfsdO4JXVUlvncCG1OZhHywyuG3yNeTvG5yWugbBT3en9upgqk_LTDmgyoJfSGz4f0WW65XXpevBjGYOLmvAKAu2TE3Ei4bBkMpHkkw8L2DWjC9JyMpH9l9hlg0wRQ.webp"
       },
       {
-        "name": "샌드위치",
+        "name": "바비큐",
         "select": 39,
-        "comment": "여러 재료를 빵 사이에 넣은 음식",
-        "c": "양식"
+        "comment": "바비큐(barbecue/barbeque)는 고기 및 과일, 채소를 큰 덩어리째로 불을 쬐어(직접 굽는 직화, 간접열로 굽기 및 훈연 모두 포함) 구워내는 요리법, 또는 그런 방식으로 구워낸 고기 및 과채를 이르는 말이다.",
+        "c": "양식",
+        "url" : "https://i.namu.wiki/i/FP5f39-cvK5UA5yWTRNcihQoyjQR9vedJbl5RuS43zg3HECQ1L8zydXFhSPNY9kcvS1VjerkPMJcXUuGmA9vSLGrpurJeO0n1JI31jdFANqBk9lE-9bSbWTrz1fwMEWEQS_bE9cK1MIYVzexnMIWxw.webp"
       },
       {
         "name": "치킨",
         "select": 40,
-        "comment": "닭고기로 만든 다양한 음식",
-        "c": "양식"
+        "comment": "치킨(chicken)은 서양 요리의 영향을 받은 닭튀김의 일종으로, 토막난 닭고기에 양념을 한 뒤 밀가루나 전분 등을 묻히고 끓는 기름에 튀긴 요리이다.",
+        "c": "양식",
+        "url" : "https://barunchicken.com/wp-content/uploads/2021/04/%EB%B0%98%EB%B0%98%EB%B0%94%EB%A5%B8%EC%B9%98%ED%82%A8-1076x807.jpg"
       }
     ]
   },
@@ -265,62 +305,72 @@
       {
         "name": "떡볶이",
         "select": 41,
-        "comment": "고추장과 간장으로 매운 소스에 튀긴 떡과 어울린 음식",
-        "c": "분식"
+        "comment": "떡과 부재료를 양념에 볶거나 끓여서 먹는 한국 요리의 하나. 이름은 떡'볶이'지만 일반적으로는 국물과 함께 끓여내거나 끓인 뒤 국물을 졸여내는 요리로, 사실상 탕이나 조림에 가깝다.",
+        "c": "분식",
+        "url" : "https://i.namu.wiki/i/_v-k7OJ2c3lNBXB3jTmmdWW8sB0a3kTqTBO2lLkKPrmdu6gK1The4GKXAwGOiceCJzqN3olaUMC67FsswyznpzYj7cL7KSWrnXUbTn-H-FUEE7gc0zfHR7_QBW4OhcRctdV0Libk7UAyXiPMApBrDQ.webp"
       },
       {
         "name": "튀김",
         "select": 42,
-        "comment": "반죽을 튀기거나 튀겨진 음식",
-        "c": "분식"
+        "comment": "튀김이란 뜨거운 기름을 사용하여 식재료를 익히는 조리법, 또는 그러한 조리법으로 만들어진 음식을 총칭하는 말이다. 식재료를 끓는 기름에 담그거나 기름을 넉넉히 두르고 익히는 방식으로, 주로 밀가루와 계란 또는 녹말 등으로 만든 묽은 반죽인 ‘튀김옷’이나 빵가루 따위를 뭍힌 후 튀겨낸다. 때로는 튀김옷 없이 원재료 그대로 익히기도 한다.",
+        "c": "분식",
+        "url" : "https://i.namu.wiki/i/6gssECMh5np_lALiz-1A0cRxN8YaiXRF7WadTMS_gJAhquRLNZ0_B1Z9UE1bvTJa2ZHBO2Lw9JkSpEX0TUqytbCMKd_kz0eTUiiKo1NdfyjZvLEHogaLEjf93xVg-yLBaP_y4HbUneJIk2PE3f7FhQ.webp"
       },
       {
-        "name": "오뎅",
+        "name": "어묵",
         "select": 43,
-        "comment": "어묵 튀김",
-        "c": "분식"
+        "comment": "어묵은 으깬 생선살과 전분 혹은 밀가루, 쌀가루를 뭉쳐서 열을 가해 묵처럼 굳혀 만든 어육 가공 음식, 또는 그것을 활용한 요리를 말한다. 한국에서 먹는 어묵은 일본의 카마보코에서 유래하였다.",
+        "c": "분식",
+        "url" : "https://i.namu.wiki/i/MYcxag_F-9M2RJMvSlezBT7-NEspImfK3jM-kpOeY62iMriFDgbZM61trsS10Q73VwahDFW2vp-Hgk6ebDsG1xlcxU0tat6UdCX1zciLHnfFNhc6PePvfVCbjTq4L_6oXenviKA3Tv0VtuNsp1eGqw.webp"
       },
       {
         "name": "핫도그",
         "select": 44,
-        "comment": "소시지를 반죽으로 감싸 튀긴 음식",
-        "c": "분식"
+        "comment": "핫도그(hot dog)는 기다란 모양의 소시지, 또는 그것을 핫도그 번에 끼운 음식이다. 소시지만을 가리켜 '위너(wiener)'라고도 한다.",
+        "c": "분식",
+        "url" : "https://blog.speak.com/wp-content/uploads/2022/09/shutterstock_1922473676-1-930x620.jpg?crop=1"
       },
       {
         "name": "순대",
         "select": 45,
-        "comment": "돼지 피와 밀가루를 반죽하여 삶거나 튀긴 음식",
-        "c": "분식"
+        "comment": "한국의 전통 음식. 현재 한국의 대표적인 길거리 음식 중 하나이다. 또한 떡볶이, 튀김, 라면, 김밥과 함께 대표적인 분식 메뉴이기도 하다.",
+        "c": "분식",
+        "url" : "https://recipe1.ezmember.co.kr/cache/recipe/2022/01/03/4e8b1b935a606f844f7586242c6703f41.jpg"
       },
       {
-        "name": "어묵",
+        "name": "붕어빵",
         "select": 45,
-        "comment": "생선의 국물을 품은 반죽을 익힌 음식",
-        "c": "분식"
+        "comment": "풀빵의 일종으로, 일본의 타이야키가 대한민국으로 전래되어 현지화된 길거리 음식.",
+        "c": "분식",
+        "url" : "https://health.chosun.com/site/data/img_dir/2023/10/19/2023101901964_0.jpg"
       },
       {
-        "name": "튀김만두",
+        "name": "호떡",
         "select": 46,
-        "comment": "만두를 튀긴 음식",
-        "c": "분식"
+        "comment": "대한민국의 길거리 음식 중 하나. 밀가루나 찹쌀로 반죽하여 안에 설탕을 넣고 납작하게 눌러 구운 음식이다.",
+        "c": "분식",
+        "url" : "https://i.namu.wiki/i/-vMvKRJlY0tB9nw0rLEYsT0u8Dzv9mq9x2mAyc2gp8sJOOEUaasTPUPmQlCentQ8hlked3nek-EFY2aLnWCo9Q.webp"
       },
       {
-        "name": "튀김오징어",
+        "name": "크레페",
         "select": 47,
-        "comment": "오징어를 튀긴 음식",
-        "c": "분식"
+        "comment": "프랑스 요리로 얇게 구운 팬케이크의 일종. 대부분 밀가루로 만든다. 팬케이크 맛보단 생크림의 단맛의 영향이 강하기에 슈크림을 먹는 느낌도 난다. 따라서 호불호가 갈리는 편.",
+        "c": "분식",
+        "url" : "https://i.namu.wiki/i/C2c_Yygko0COA9u5O-Shz6Ilk4OLf6TCSuYI8-FjyN9WgxB0iGROXVf2q8xMByjAcuHvLjB4HSmjnAGw0pPsMxQJCS2IyB7GCSLF-XWcgCThfFJnh3Si55-rpqp3BNEjxwc4iXmC1_5f3GDtPkCrhg.webp"
       },
       {
         "name": "참치주먹밥",
         "select": 48,
-        "comment": "참치와 밥을 주먹 모양으로 만든 음식",
-        "c": "분식"
+        "comment": "곡물가루에 물 또는 우유, 계란 등을 섞어 만든 반죽을 프라이팬에 납작하게 구워 만드는 요리이다. 핫케이크 (hot-cake), 그리들케이크(griddlecake)라고도 한다.",
+        "c": "분식",
+        "url" : "https://i.namu.wiki/i/bRlSDUbP_Bsn2b4wk47Ka3cA_dGePxaTWSd1wA8QY3ZoHgo7D5r1qBBfhIl6JgZRNzP1kP_3imBBL2YK2-N01tmCt_Leu8bRXbDb1Z_7GCQbuvNoDnXy6Ftltej6T3F81TmGpuBQaRP8eWQDWjS27g.webp"
       },
       {
         "name": "라볶이",
         "select": 49,
-        "comment": "라면과 떡볶이를 함께 먹는 음식",
-        "c": "분식"
+        "comment": "라면과 떡볶이를 함께 먹는 음식. 기본 떡볶이에 라면사리를 추가한 형태이다.",
+        "c": "분식",
+        "url" : "https://recipe1.ezmember.co.kr/cache/recipe/2018/03/04/ba55307500f38b5b93e75f479290cd711.jpg"
       }
     ]
   },
@@ -328,64 +378,74 @@
     "category": "간편식",
     "food": [
       {
-        "name": "햄버거",
+        "name": "주먹밥",
         "select": 50,
-        "comment": "고기 패티와 야채를 빵으로 싸먹는 음식",
-        "c": "간편식"
-      },
-      {
-        "name": "피자",
-        "select": 51,
-        "comment": "반죽 위에 소스, 치즈, 토핑 등을 얹고 구워 만든 음식",
-        "c": "간편식"
-      },
-      {
-        "name": "치킨",
-        "select": 52,
-        "comment": "닭을 튀겨 더 식은 음식",
-        "c": "간편식"
+        "comment": "밥을 뭉쳐놓은 형태의 음식을 총칭하는 말. 한국어 '주먹밥'은 말 그대로 주먹처럼 쥔 밥이라고 해서 지어진 이름이다",
+        "c": "간편식",
+        "url" : "https://i.namu.wiki/i/bcegdzNp6uz6-Tka6FHmtPWQHTaAqzgIpbgve54Weo1lq-umfMA-wUMf8R-E2WHnVyFtJmVbUDheL48AMwANBA.webp"
       },
       {
         "name": "샌드위치",
-        "select": 53,
-        "comment": "빵 사이에 고기, 치즈, 야채 등을 넣은 음식",
-        "c": "간편식"
+        "select": 51,
+        "comment": "써브웨이의 샌드위치처럼 둥글고 긴 빵을 갈라 재료를 속에 채워넣는 샌드위치, 따뜻하게 데우거나 그릴에 구워서 나오는 핫 샌드위치 등도 있으며 심지어 아예 카나페처럼 빵 한 장 위에 재료를 그대로 올려놓기만 한 '오픈 샌드위치'도 있다.",
+        "c": "간편식",
+        "url" : "https://i.namu.wiki/i/_xThb4vMrxRdzW6dsDkdPZdUxGKP69QpFifCPwDmHW5NJx117OKkHhC3vkwWYXJ981nxG-6g8ouhmDBDQ6bH0-qKUsB0EjuuLaEaDAv1EyN224cgWF4BS274A4MHonTt_7byUSKhE3DKLJM3QZE3hw.webp"
       },
       {
-        "name": "핫도그",
+        "name": "유뷰초밥",
+        "select": 52,
+        "comment": "달게 조린 유부 속에 초밥을 채운 일본 요리다.일본에서는 일단 스시의 한 종류로 분류하긴 하지만, 거기서도 일반적인 생선회 초밥과는 다르게 취급하는 편이다.",
+        "c": "간편식",
+        "url" : "https://i.namu.wiki/i/B5mdCRSRAiA-1Anck1Wo_K__P841DBHd2Jr0W6YH1mvC8HolEJmtlrNj_FX5eKOTG1EiJ3sisciZtt-QzJjryeA1JSiBmAhstgiyNE0rG8np-9Ihl0xjZa_aNJSihKvBSE0TjAExE92A5tj3VT7wMA.webp"
+      },
+      {
+        "name": "도넛",
+        "select": 53,
+        "comment": "밀가루에 여러 가지 부재료를 섞어 반죽하여 기름에 튀긴 서양식 빵.도넛의 기원은 빵을 만들고 남은 자투리 반죽을 사용하여, 기름에 튀긴 '과자'인 '올리코엑'에서 유래되었다고 한다.",
+        "c": "간편식",
+        "url" : "https://i.namu.wiki/i/rxDRf2ou4SnaQKApD7reWXXNnyhb3H-6RR2bzdyniyihSm_h0dxpabf-HhzRHbFl_tVGIbJwVhauAgcRANIYTkWRYVN1n2kbGeV1ygBiuu-d0iGuRUVaYKzS0cX_yMq-E7Gmu-6G1VxNMb2DWAumlA.webp"
+      },
+      {
+        "name": "편의점 도시락",
         "select": 54,
-        "comment": "소시지를 반죽으로 감싸 튀긴 음식",
-        "c": "간편식"
+        "comment": "편의점 도시락은 편의점 등 소매점에서 판매할 목적으로 생산되는 도시락을 지칭한다. 회화에서는 '편도'등의 약칭으로도 불린다.",
+        "c": "간편식",
+        "url" : "https://pds.joongang.co.kr//news/component/htmlphoto_mmdata/201709/18/52dc909c-c0b2-4959-b698-f89b2ece9565.jpg"
       },
       {
         "name": "컵라면",
         "select": 55,
-        "comment": "컵에 담겨 있는 라면",
-        "c": "간편식"
+        "comment": "컵에 담겨 있는 라면. 라면 이외의 볶음면, 짜장면 형태의 면류 음식도 나오고 있다",
+        "c": "간편식",
+        "url" : "https://i.namu.wiki/i/3zeSlW0ldz3YglWkpanpQPzD2QMJDHAH1Q9blXgPNMPZDqOQksyaS-bQG81BJ24qtwbjU2wna8Tmk9IZd9cAgA.webp"
       },
       {
-        "name": "떡볶이 컵라면",
+        "name": "컵밥",
         "select": 56,
-        "comment": "컵에 담겨 있는 떡볶이 맛 라면",
-        "c": "간편식"
+        "comment": "덮밥의 노점 버전 음식이다. 주로 플라스틱이나 종이 재질의 컵 속에 밥을 넣고 그 위에 여러가지 고명거리를 얹은 덮밥류 요리이다.",
+        "c": "간편식",
+        "url" : "https://i.namu.wiki/i/DxhlgoWIt8fZX2DIckO9Mv8dW36V87XiKSnlp8h8EK0-oTqj4AOJxX_OXsxAImtfbYRr-9ElVFzEnPPI0ALkGA.webp"
       },
       {
-        "name": "햄버거 스테이크",
+        "name": "요거트",
         "select": 57,
-        "comment": "햄버거 형태의 스테이크 음식",
-        "c": "간편식"
+        "comment": "유산균을 이용하여 우유를 발효시킨 식품. 쉽게 말해 발효우유[1]. 규범 표기는 요구르트이지만, 요거트라고도 불리며, 대표적인 요구르트 상품으론 빙그레에서 출시하는 요플레가 있다. ",
+        "c": "간편식",
+        "url" : "https://i.namu.wiki/i/SuUkXYbnIJ1N5-FAeHv1gUMo6L1o7ICQz4O3FvKKCucZT0qXNWeU0_8GuiS7zvrlzpVAiMaibQiphSxKcq77UoYdwb2tPZAzpPCefQ7wd4uYjFPjnDq2e3jNjRalG094Ta7qsvWuBK6UjUv4D1xDyA.webp"
       },
       {
-        "name": "치즈스틱",
+        "name": "에너지바",
         "select": 58,
-        "comment": "치즈를 튀긴 음식",
-        "c": "간편식"
+        "comment": "열량을 많이 소모하여 열량 보충이 필요하거나 식사 시간이 모자랄 때 한 끼 식사 대용으로 먹을 수 있는 식품. 칼로리바라고도 불린다. 가격은 꽤 비싼 편이다.열량이 많이 필요하다 보니, 주요 재료는 초콜릿을 함유한 곡식류 같은 것들이다.",
+        "c": "간편식",
+        "url" : "https://cdn.mkhealth.co.kr/news/photo/202211/61142_64647_2540.jpg"
       },
       {
         "name": "김밥",
         "select": 59,
-        "comment": "밥과 다양한 재료를 김으로 싸서 만든 음식",
-        "c": "간편식"
+        "comment": "김밥(Gimbap, Seaweed roll)은 밥을 김으로 감싸 둥글게 만 뒤 잘라낸 음식으로, 오늘날 한국에서는 넓은 의미의 분식으로 여겨진다.",
+        "c": "간편식",
+        "url" : "https://i.namu.wiki/i/4PnpTg3v2I16EabDZMspN9v9FaS5fo9QemvGawrLrhab3LVB2TG1ulor0eI1tI2Ori5QjpFUau16HXAIUeRv9zultmO7SrcoskzhHbMGPuPjgg0SUF8aT7yaFe0hUsih-2UQ5zxzFdhN6TUvF4K7hA.webp"
       }
     ]
   }

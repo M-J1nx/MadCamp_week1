@@ -15,7 +15,7 @@
     "name" : "순신이",
     "phoneNumber" : "010-8765-4321",
     "relationship" : "친구",
-    "picture" : ""
+    "picture" : "pokec"
   },
   {
     "name" : "엄마",
@@ -33,18 +33,54 @@
     "name" : "동생",
     "phoneNumber" : "010-0000-0003",
     "relationship" : "가족",
+    "picture" : "pokeu"
+  },
+  {
+    "name" : "도민준",
+    "phoneNumber" : "010-0000-0004",
+    "relationship" : "지인",
     "picture" : ""
   },
   {
-    "name" : "개",
-    "phoneNumber" : "010-0000-0002",
-    "relationship" : "가족",
+    "name" : "김서준",
+    "phoneNumber" : "010-0000-0005",
+    "relationship" : "지인",
+    "picture" : "pokev"
+  },
+  {
+    "name" : "최도운",
+    "phoneNumber" : "010-0000-0006",
+    "relationship" : "지인",
     "picture" : ""
   },
   {
-    "name" : "고양이",
-    "phoneNumber" : "010-0000-0003",
-    "relationship" : "가족",
+    "name" : "이예준",
+    "phoneNumber" : "010-0000-0007",
+    "relationship" : "지인",
     "picture" : ""
+  },
+  {
+    "name" : "박시우",
+    "phoneNumber" : "010-0000-0008",
+    "relationship" : "지인",
+    "picture" : "pokei"
+  },
+  {
+    "name" : "유하준",
+    "phoneNumber" : "010-0000-0009",
+    "relationship" : "지인",
+    "picture" : "pokef"
+  },
+  {
+    "name" : "정지호",
+    "phoneNumber" : "010-0000-0010",
+    "relationship" : "지인",
+    "picture" : "pokem"
+  },
+  {
+    "name" : "류주원",
+    "phoneNumber" : "010-0000-0011",
+    "relationship" : "지인",
+    "picture" : "pokee"
   }
 ]
