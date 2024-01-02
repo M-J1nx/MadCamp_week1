@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000"
-    tools:context=".ui.notifications.NotificationsFragment"
-    >
+    tools:context=".ui.notifications.NotificationsFragment">
 
     <ImageView
         android:id="@+id/imageViewBackground"
@@ -14,12 +13,25 @@
         android:layout_height="0dp"
         android:scaleType="centerCrop"
         android:src="@drawable/recommend_background"
-        android:blurRadius="50"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintDimensionRatio="H" />
+        app:layout_constraintDimensionRatio="H"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewBlack"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/rectangle_style"
+        android:alpha="0.4"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="H"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
         android:layout_width="wrap_content"
@@ -38,76 +50,86 @@
                 android:layout_height="wrap_content"
                 tools:ignore="MissingConstraints">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/introduce_bar"
-                    tools:ignore="MissingConstraints" />
-
-                <LinearLayout
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="left|center"
-                    android:layout_marginLeft="30dp">
+                    tools:ignore="MissingConstraints">
 
-                    <TextView
+                    <ImageView
+                        android:id="@+id/imageView2"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="NO."
-                        android:textColor="@color/white"
-                        android:textSize="20sp"
-                        android:elevation="10dp"
-                        />
-                    <TextView
-                        android:id="@+id/NoNumber"
-                        android:layout_width="40dp"
-                        android:layout_height="wrap_content"
-                        android:text=""
-                        android:textColor="@color/white"
-                        android:textSize="20sp"
-                        android:elevation="10dp"
-                        />
-                    <TextView
-                        android:id="@+id/pickedMenu"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="40dp"
-                        android:text=""
-                        android:textColor="@color/white"
-                        android:textSize="20sp"
-                        android:elevation="10dp"
-                        />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    tools:ignore="MissingConstraints"
-                    android:layout_marginTop="35dp"
-                    >
-
-                    <ImageButton
-                        android:id="@+id/confirmButton"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:background="@drawable/check_mark"
-                        android:scaleType="centerCrop"
-                        android:layout_marginLeft="320dp"
-                        android:elevation="10dp"
-                        android:contentDescription="체크버튼"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/introduce_bar"
                         tools:ignore="MissingConstraints" />
 
-                    <ImageButton
-                        android:id="@+id/resetButton"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_marginLeft="10dp"
-                        app:layout_constraintEnd_toEndOf="@+id/introduceBar"
-                        android:background="@drawable/reset_mark"
-                        android:scaleType="centerCrop"
-                        android:contentDescription="리셋버튼"
-                        tools:ignore="MissingConstraints" />
-                </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginRight="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageButton
+                            android:id="@+id/confirmButton"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/check_mark"
+                            android:contentDescription="체크버튼"
+                            android:elevation="10dp"
+                            android:scaleType="centerCrop"
+                            tools:ignore="MissingConstraints" />
+
+                        <ImageButton
+                            android:id="@+id/recommend"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/reset_mark"
+                            android:contentDescription="리셋버튼"
+                            android:scaleType="centerCrop"
+                            tools:ignore="MissingConstraints" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/imageView2"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:elevation="10dp"
+                            android:text="NO."
+                            android:textColor="@color/white"
+                            android:layout_marginLeft="30dp"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/NoNumber"
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:elevation="10dp"
+                            android:text=""
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/pickedMenu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="40dp"
+                            android:elevation="10dp"
+                            android:text=""
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
             </FrameLayout>
 
             <ImageView
@@ -116,115 +138,145 @@
                 android:layout_height="220dp"
                 android:layout_gravity="center_horizontal"
                 android:src="@drawable/profile"
-                tools:ignore="MissingConstraints"
-                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
-
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
 
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/typeBar"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="60dp"
                 android:layout_gravity="center"
-                app:cardCornerRadius="40dp"
+                android:layout_marginTop="13dp"
+                app:cardCornerRadius="10dp"
                 app:cardElevation="5dp"
                 app:cardUseCompatPadding="true"
                 app:layout_constraintTop_toBottomOf="@+id/foodPic"
-                android:layout_marginTop="13dp"
                 tools:ignore="MissingConstraints">
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="100dp"
-                    android:layout_height="60dp"
-                    android:layout_gravity="center"
-                    app:cardBackgroundColor="@color/black"
-                    app:cardElevation="-1dp"
-                    app:layout_constraintTop_toBottomOf="parent"
-                    android:layout_marginLeft="-140dp"
-                    app:cardCornerRadius="40dp"
-                    app:cardUseCompatPadding="true"
-                    />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left|center"
-                    android:layout_marginLeft="35dp"
-                    android:layout_marginBottom="2dp">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="타입"
-                        android:textColor="@color/white"
-                        android:textSize="15sp"
-                        android:elevation="100dp"
-                        />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
                     <TextView
                         android:id="@+id/type"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:elevation="10dp"
+                        android:text=""
                         android:textColor="@color/black"
                         android:textSize="15sp"
-                        android:text=""
-                        android:layout_marginLeft="30dp"
-                        android:elevation="10dp"
-                        />
-                </LinearLayout>
+                        android:layout_marginLeft="13dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/typeRound"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:elevation="100dp"
+                        android:text="타입"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/typeRound"
+                        app:layout_constraintEnd_toEndOf="@+id/typeRound"
+                        app:layout_constraintStart_toStartOf="@+id/typeRound"
+                        app:layout_constraintTop_toTopOf="@+id/typeRound" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/typeRound"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="5dp"
+                        app:cardBackgroundColor="@color/black"
+                        app:cardCornerRadius="40dp"
+                        app:cardElevation="-1dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" >
+
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="@+id/typeRound"
+                        app:layout_constraintEnd_toEndOf="@+id/typeRound"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/typeRound">
+
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/selected"
+                android:id="@+id/selectedBar"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="60dp"
                 android:layout_gravity="center"
-                app:cardCornerRadius="40dp"
+                app:cardCornerRadius="10dp"
                 app:cardElevation="5dp"
                 app:cardUseCompatPadding="true"
                 app:layout_constraintTop_toBottomOf="@+id/foodPic"
                 tools:ignore="MissingConstraints">
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="100dp"
-                    android:layout_height="60dp"
-                    android:layout_gravity="center"
-                    app:cardBackgroundColor="@color/black"
-                    app:cardElevation="-1dp"
-                    app:layout_constraintTop_toBottomOf="parent"
-                    android:layout_marginLeft="-140dp"
-                    app:cardCornerRadius="40dp"
-                    app:cardUseCompatPadding="true"
-                    />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left|center"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginBottom="2dp">
+                    <TextView
+                        android:id="@+id/selected"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:elevation="10dp"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:layout_marginLeft="13dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/selectRound"
+                        app:layout_constraintTop_toTopOf="parent" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:elevation="100dp"
                         android:text="선택 횟수"
                         android:textColor="@color/white"
                         android:textSize="15sp"
-                        android:elevation="100dp"
-                        />
+                        app:layout_constraintBottom_toBottomOf="@+id/selectRound"
+                        app:layout_constraintEnd_toEndOf="@+id/selectRound"
+                        app:layout_constraintStart_toStartOf="@+id/selectRound"
+                        app:layout_constraintTop_toTopOf="@+id/selectRound" />
 
-                    <TextView
-                        android:id="@+id/selectedBar"
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/selectRound"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="5dp"
+                        app:cardBackgroundColor="@color/black"
+                        app:cardCornerRadius="40dp"
+                        app:cardElevation="-1dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" >
+
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/black"
-                        android:textSize="15sp"
-                        android:text=""
-                        android:layout_marginLeft="15dp"
-                        android:elevation="10dp"
-                        />
-                </LinearLayout>
+                        app:layout_constraintBottom_toBottomOf="@+id/selectRound"
+                        app:layout_constraintEnd_toEndOf="@+id/selectRound"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/selectRound">
+
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.cardview.widget.CardView>
 
@@ -233,60 +285,69 @@
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
                 android:layout_gravity="center"
-                app:cardCornerRadius="30dp"
+                app:cardCornerRadius="10dp"
                 app:cardElevation="5dp"
                 app:cardUseCompatPadding="true"
                 app:layout_constraintTop_toBottomOf="@+id/foodPic"
                 tools:ignore="MissingConstraints">
 
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="200dp"
-                    android:layout_height="200dp"
-                    android:src="@drawable/western_food"
-                    android:scaleType="centerCrop"
-                    android:layout_marginTop="40dp"
-                    android:layout_marginLeft="90dp"
-                    android:alpha="0.1"
-                    />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="100dp"
-                    android:layout_height="60dp"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="-140dp"
-                    android:layout_marginTop="-110dp"
-                    app:cardBackgroundColor="@color/black"
-                    app:cardCornerRadius="40dp"
-                    app:cardElevation="-1dp"
-                    app:cardUseCompatPadding="true" />
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:alpha="0.1"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/western_food"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="11dp"
-                    android:layout_marginBottom="2dp"
-                    android:orientation="vertical">
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardView2"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        app:cardBackgroundColor="@color/black"
+                        app:cardCornerRadius="40dp"
+                        app:cardElevation="-1dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" >
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:elevation="100dp"
-                        android:text="한줄 소개"
-                        android:textColor="@color/white"
-                        android:textSize="15sp" />
+                    </androidx.cardview.widget.CardView>
 
                     <TextView
                         android:id="@+id/comment"
-                        android:layout_width="wrap_content"
+                        android:layout_width="340dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
                         android:elevation="10dp"
                         android:text=""
                         android:textColor="@color/black"
-                        android:textSize="15sp" />
-                </LinearLayout>
+                        android:textSize="15sp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:elevation="100dp"
+                        android:text="음식 소개"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/cardView2"
+                        app:layout_constraintEnd_toEndOf="@+id/cardView2"
+                        app:layout_constraintStart_toStartOf="@+id/cardView2"
+                        app:layout_constraintTop_toTopOf="@+id/cardView2" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.cardview.widget.CardView>
         </LinearLayout>
@@ -295,25 +356,22 @@
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
         android:layout_margin="10dp"
         app:cardCornerRadius="90dp"
         app:cardElevation="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         tools:ignore="MissingConstraints"
-
         >
 
         <androidx.appcompat.widget.AppCompatImageButton
-            android:id="@+id/recommendMimikyu"
+            android:id="@+id/resetButton"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_gravity="center"
-            android:src="@drawable/answer_mimikyu"
             android:background="@color/invisible"
-            tools:ignore="SpeakableTextPresentCheck"
-            />
+            android:src="@drawable/answer_mimikyu"
+            tools:ignore="SpeakableTextPresentCheck" />
 
     </androidx.cardview.widget.CardView>
 
