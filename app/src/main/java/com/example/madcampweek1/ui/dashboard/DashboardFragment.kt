@@ -88,6 +88,8 @@ class DashboardFragment : Fragment() {
         _binding = FragmentDashboardBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
+        requestPermission()
+
         val recyclerView: RecyclerView = binding.recyclerView
         val layoutManager = GridLayoutManager(context, 2)
         recyclerView.layoutManager = layoutManager
@@ -96,6 +98,19 @@ class DashboardFragment : Fragment() {
             val intent = Intent(Intent.ACTION_PICK)
             intent.type = "image/*"
             startActivityForResult(intent, REQUEST_GET_IMAGE)
+
+        }
+        binding.getImageBtn2.setOnClickListener {
+            imageList.shuffle()
+            adapter.notifyDataSetChanged()
+
+
+        }
+        binding.getImageBtn3.setOnClickListener {
+            imageList.removeAt(0)
+            adapter.notifyDataSetChanged()
+
+
         }
         fun convertDrawableResourcesToUri(context: Context, vararg resourceIds: Int): MutableList<Uri> {
             val uriList = mutableListOf<Uri>()
@@ -113,20 +128,22 @@ class DashboardFragment : Fragment() {
             return uriList
         }
 
-        val imageResourceIds = arrayOf(
+        val imageResourceIds = intArrayOf(
             R.drawable.pokea, R.drawable.pokeb, R.drawable.pokec, R.drawable.poked,
             R.drawable.pokee, R.drawable.pokef, R.drawable.pokeg, R.drawable.pokeh,
             R.drawable.pokei, R.drawable.pokej, R.drawable.pokek, R.drawable.pokel,
             R.drawable.pokem, R.drawable.poken, R.drawable.pokeo, R.drawable.pokep,
             R.drawable.pokeq, R.drawable.poker, R.drawable.pokes, R.drawable.poket,
             R.drawable.pokeu, R.drawable.pokev
-        ).toIntArray()
+        )
 
         imageList = convertDrawableResourcesToUri(requireContext(), *imageResourceIds)
 
         adapter = ImageAdapter(imageList) { position ->
             val intent = Intent(requireActivity(), SubActivity::class.java)
+            val imlist:Uri =imageList[position]
             intent.putExtra("clicked_image_index", position)
+            intent.putExtra("imageList",ArrayList(imageList))
             startActivity(intent)
         }
         recyclerView.adapter = adapter
@@ -142,7 +159,7 @@ class DashboardFragment : Fragment() {
                     try {
                         val uri = data?.data
                         uri?.let {uri   ->
-                            imageList.add(uri)
+                            imageList.add(0, uri)
                             adapter.notifyDataSetChanged()
                         }
                     } catch (e: Exception) {

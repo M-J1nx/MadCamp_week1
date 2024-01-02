@@ -1,7 +1,10 @@
 package com.example.madcampweek1
 
 import android.app.Activity
+import android.content.ContentResolver
+import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -13,52 +16,28 @@ import com.example.madcampweek1.databinding.FragmentDashboardBinding
 
 class SubActivity : AppCompatActivity() {
 
-    private val images = intArrayOf(
-        R.drawable.pokea,
-        R.drawable.pokeb,
-        R.drawable.pokec,
-        R.drawable.poked,
-        R.drawable.pokee,
-        R.drawable.pokef,
-        R.drawable.pokeg,
-        R.drawable.pokeh,
-        R.drawable.pokei,
-        R.drawable.pokej,
-        R.drawable.pokek,
-        R.drawable.pokel,
-        R.drawable.pokem,
-        R.drawable.poken,
-        R.drawable.pokeo,
-        R.drawable.pokep,
-        R.drawable.pokeq,
-        R.drawable.poker,
-        R.drawable.pokes,
-        R.drawable.poket,
-        R.drawable.pokeu,
-        R.drawable.pokev
-    )
+    var imageListEnlarge:MutableList<Uri> = mutableListOf()
 
+override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    setContentView(R.layout.activity_sub)
 
-        // Add other image resources here
+    // Retrieve the imageList from the intent
+    imageListEnlarge = intent.getParcelableArrayListExtra("imageList") ?: mutableListOf()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sub) // Ensure this is your SubActivity layout file
+    supportActionBar?.title = "사진 크게 보기"
+    supportActionBar?.hide()
 
-        supportActionBar?.setTitle("사진 크게 보기")
+    val clickedImageIndex = intent.getIntExtra("clicked_image_index", -1)
+    val imageViewL = findViewById<ImageView>(R.id.imageViewL)
 
-        val clickedImageIndex = intent.getIntExtra("clicked_image_index", -1)
-        val imageViewL = findViewById<ImageView>(R.id.imageViewL) // Get reference to the ImageView
-
-        if (clickedImageIndex != -1 && clickedImageIndex < images.size) {
-            imageViewL.setImageResource(images[clickedImageIndex])
-        }
-
-        imageViewL.setOnClickListener{
-            finish()
-        }
-
+    if (clickedImageIndex != -1 && clickedImageIndex < imageListEnlarge.size) {
+        imageViewL.setImageURI(imageListEnlarge[clickedImageIndex])
     }
 
+    imageViewL.setOnClickListener {
+        finish()
+    }
+}
 
 }
