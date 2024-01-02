@@ -9,6 +9,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.Animation
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.Toast
@@ -33,6 +34,7 @@ class MenuRecommendFragment : Fragment() {
 
     private lateinit var viewModel: MenuRecommendViewModel
     private lateinit var binding: FragmentMenuRecommendBinding
+
 
     private var foodSet = ArrayList<String>()
     private var selectedTimeSet: ArrayList<Int> = ArrayList<Int>(List(100) { 0 })
