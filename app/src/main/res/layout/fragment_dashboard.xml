@@ -12,12 +12,7 @@
     android:layout_height="50dp"
     android:text="Access Gallery"/>
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/main_imgView"
-        android:src="@drawable/pokedefalt"
-        ></ImageView>
+
 
 
     <androidx.recyclerview.widget.RecyclerView
