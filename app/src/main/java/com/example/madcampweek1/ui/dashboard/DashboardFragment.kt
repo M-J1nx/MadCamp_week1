@@ -8,6 +8,7 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -28,6 +29,7 @@ class DashboardFragment : Fragment() {
     private val binding get() = _binding!!
     private val REQUEST_GET_IMAGE = 105
     val PERMISSIONS_REQUEST_CODE = 100
+    val REQUEST_CODE_SUB_ACTIVITY = 123
     private val SELECT_IMAGE_REQUEST = 1
     var REQUIRED_PERMISSIONS = arrayOf<String>( Manifest.permission.READ_EXTERNAL_STORAGE)
     var positionMain = 0
@@ -88,6 +90,9 @@ class DashboardFragment : Fragment() {
         _binding = FragmentDashboardBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
+
+
+
         requestPermission()
 
         val recyclerView: RecyclerView = binding.recyclerView
@@ -138,13 +143,11 @@ class DashboardFragment : Fragment() {
         )
 
         imageList = convertDrawableResourcesToUri(requireContext(), *imageResourceIds)
-
         adapter = ImageAdapter(imageList) { position ->
             val intent = Intent(requireActivity(), SubActivity::class.java)
-            val imlist:Uri =imageList[position]
             intent.putExtra("clicked_image_index", position)
             intent.putExtra("imageList",ArrayList(imageList))
-            startActivity(intent)
+            startActivityForResult(intent,1)
         }
         recyclerView.adapter = adapter
 
@@ -154,6 +157,15 @@ class DashboardFragment : Fragment() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if (resultCode == Activity.RESULT_OK) {
+            val deleteFlag = data?.getIntExtra("delete_flag", 0) // Retrieve delete flag from Intent
+            if (deleteFlag == 1) {
+                val deleteIndex = data.getIntExtra("delete_index", -1)
+                if (deleteIndex != -1) {
+                    imageList.removeAt(deleteIndex)
+                    adapter.notifyDataSetChanged()
+                }
+            }
+
             when (requestCode) {
                 REQUEST_GET_IMAGE -> {
                     try {
