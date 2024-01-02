@@ -51,7 +51,6 @@ class CustomAdapter(private val localDataSet: ArrayList<String>) :
         holder.numberView.text = individualArray[1]
 
         var size = individualArray.size
-        Log.d("test", "$individualArray has $size")
 
         val context = holder.itemView.context
         if (individualArray.size > 3) {
@@ -76,5 +75,11 @@ class CustomAdapter(private val localDataSet: ArrayList<String>) :
     // 전체 데이터의 갯수
     override fun getItemCount(): Int {
         return localDataSet.size
+    }
+
+    fun updateData(newData: ArrayList<String>) {
+        localDataSet.clear()
+        localDataSet.addAll(newData)
+        notifyDataSetChanged()
     }
 }
