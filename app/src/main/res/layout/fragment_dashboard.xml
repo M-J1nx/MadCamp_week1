@@ -1,8 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.recyclerview.widget.RecyclerView
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#C81C1C">
+    <Button
+    android:id="@+id/get_image_btn"
+    android:layout_width="290dp"
+    android:layout_height="38dp"
+    android:text="Access Gallery"/>
+
+        <ImageButton
+            android:id="@+id/get_image_btn2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/shuffle">
+
+        </ImageButton>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/recyclerView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
     android:padding="1dp"/>
+
+
+</LinearLayout>

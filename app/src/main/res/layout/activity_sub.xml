@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".SubActivity">
 
     <ImageView
@@ -16,4 +17,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         />
+
+    <ImageButton
+        android:id="@+id/deleteButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="166dp"
+        android:layout_marginBottom="70dp"
+        android:background="@drawable/delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+    </ImageButton>
+
+    <!--        android:src="@drawable/baseline_add_photo_alternate_black_48"-->
 </androidx.constraintlayout.widget.ConstraintLayout>
