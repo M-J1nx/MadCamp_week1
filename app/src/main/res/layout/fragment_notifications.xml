@@ -37,35 +37,35 @@
 
 
     <ImageView
+        android:id="@+id/closePokeball"
         android:layout_width="290dp"
         android:layout_height="290dp"
         android:layout_gravity="center"
         android:layout_marginRight="44dp"
-        android:layout_marginBottom="264dp"
+        android:layout_marginBottom="300dp"
         android:src="@drawable/pokeball"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:id="@+id/closePokeball"/>
+        app:layout_constraintRight_toRightOf="parent" />
 
     <ImageView
-        android:layout_width="320dp"
-        android:layout_height="320dp"
+        android:id="@+id/openPokeball"
+        android:layout_width="317dp"
+        android:layout_height="317dp"
         android:layout_gravity="center"
         android:layout_marginRight="24dp"
-        android:layout_marginBottom="248dp"
+        android:layout_marginBottom="284dp"
         android:src="@drawable/openpokeball"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:id="@+id/openPokeball"/>
+        app:layout_constraintRight_toRightOf="parent" />
 
     <TextView
         android:id="@+id/rotateResultTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="156dp"
-        android:layout_marginTop="210dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="230dp"
         android:shadowColor="@color/white"
         android:shadowDx="-1"
         android:shadowDy="-1"
@@ -73,8 +73,9 @@
         android:text=""
         android:textColor="@color/white"
         android:elevation="10dp"
+        android:fontFamily="@font/dunggeunmo"
 
-        android:textSize="20dp"
+        android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
 
@@ -84,25 +85,25 @@
         android:id="@+id/recommendButton"
         android:layout_width="180dp"
         android:layout_height="60dp"
-        android:layout_marginBottom="84dp"
+        android:layout_marginBottom="116dp"
         android:background="@android:color/transparent"
-        android:text="▶︎메뉴    "
         android:fontFamily="@font/dunggeunmo"
+        android:text="▶︎메뉴    "
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.904"
-        app:layout_constraintStart_toStartOf="parent"
-        android:textSize="20sp"/>
+        app:layout_constraintHorizontal_bias="0.887"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/additionalButton"
         android:layout_width="180dp"
         android:layout_height="60dp"
         android:layout_gravity=""
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="56dp"
         android:background="@android:color/transparent"
-        android:text="▶︎포켓몬  "
         android:fontFamily="@font/dunggeunmo"
+        android:text="▶︎포켓몬  "
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -114,10 +115,10 @@
         android:layout_width="180dp"
         android:layout_height="60dp"
         android:layout_marginRight="300px"
-        android:layout_marginBottom="84dp"
+        android:layout_marginBottom="116dp"
         android:background="@android:color/transparent"
-        android:text="▶︎카테고리"
         android:fontFamily="@font/dunggeunmo"
+        android:text="▶︎카테고리"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -129,15 +130,15 @@
         android:layout_width="180dp"
         android:layout_height="60dp"
         android:layout_marginLeft="300px"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="56dp"
         android:background="@android:color/transparent"
-        android:text="▶︎도망간다"
         android:fontFamily="@font/dunggeunmo"
+        android:text="▶︎도망간다"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.809"
-        app:layout_constraintStart_toStartOf="parent"
-        android:textSize="20sp"/>
+        app:layout_constraintHorizontal_bias="0.774"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
