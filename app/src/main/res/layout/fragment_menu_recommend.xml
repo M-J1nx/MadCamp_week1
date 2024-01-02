@@ -4,89 +4,317 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
-    tools:context=".ui.notifications.NotificationsFragment">
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/recommendMimikyu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/invisible"
-        android:drawableTop="@drawable/question_mimikyu"
-        android:layout_marginLeft="400px"
-        android:clickable="true"
-        android:contentDescription="this is mimikyu"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        />
-
-    <TextView
-        android:id="@+id/today"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="오늘은..."
-        android:textSize="20dp"
-        android:elevation="1000dp"
-        android:layout_marginRight="250dp"
-        android:layout_marginBottom="420dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        />
-
-    <TextView
-        android:id="@+id/pickedMenu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="뭘 먹냐면....."
-        android:textSize="20dp"
-        android:elevation="1000dp"
-        android:layout_marginRight="150dp"
-        android:layout_marginBottom="370dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        />
+    android:background="#000000"
+    tools:context=".ui.notifications.NotificationsFragment"
+    >
 
     <ImageView
-        android:id="@+id/cloud"
-        android:layout_width="260dp"
-        android:layout_height="260dp"
-        android:src="@drawable/thinking"
-        android:elevation="100dp"
-        android:layout_marginRight="350px"
-        android:layout_marginBottom="600px"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/imageViewBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/recommend_background"
+        android:blurRadius="50"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="H" />
 
-    <TextView
-        android:id="@+id/alarm"
+    <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="따라큐를 클릭해봐요! >"
-        android:background="@color/black"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        android:elevation="1000dp"
-        android:layout_marginRight="150dp"
-        android:layout_marginBottom="60dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        />
-
-    <TextView
-        android:id="@+id/menu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="this is test menu"
-        android:textSize="20dp"
         tools:ignore="MissingConstraints">
-    </TextView>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <FrameLayout
+                android:id="@+id/introduceBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/introduce_bar"
+                    tools:ignore="MissingConstraints" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center"
+                    android:layout_marginLeft="30dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="NO."
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:elevation="10dp"
+                        />
+                    <TextView
+                        android:id="@+id/NoNumber"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:elevation="10dp"
+                        />
+                    <TextView
+                        android:id="@+id/pickedMenu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:elevation="10dp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="MissingConstraints"
+                    android:layout_marginTop="35dp"
+                    >
+
+                    <ImageButton
+                        android:id="@+id/confirmButton"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/check_mark"
+                        android:scaleType="centerCrop"
+                        android:layout_marginLeft="320dp"
+                        android:elevation="10dp"
+                        android:contentDescription="체크버튼"
+                        tools:ignore="MissingConstraints" />
+
+                    <ImageButton
+                        android:id="@+id/resetButton"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        app:layout_constraintEnd_toEndOf="@+id/introduceBar"
+                        android:background="@drawable/reset_mark"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="리셋버튼"
+                        tools:ignore="MissingConstraints" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/foodPic"
+                android:layout_width="280dp"
+                android:layout_height="220dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/profile"
+                tools:ignore="MissingConstraints"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/typeBar"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                app:cardCornerRadius="40dp"
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintTop_toBottomOf="@+id/foodPic"
+                android:layout_marginTop="13dp"
+                tools:ignore="MissingConstraints">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="100dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    app:cardBackgroundColor="@color/black"
+                    app:cardElevation="-1dp"
+                    app:layout_constraintTop_toBottomOf="parent"
+                    android:layout_marginLeft="-140dp"
+                    app:cardCornerRadius="40dp"
+                    app:cardUseCompatPadding="true"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginBottom="2dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="타입"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:elevation="100dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:text=""
+                        android:layout_marginLeft="30dp"
+                        android:elevation="10dp"
+                        />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/selected"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                app:cardCornerRadius="40dp"
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintTop_toBottomOf="@+id/foodPic"
+                tools:ignore="MissingConstraints">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="100dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    app:cardBackgroundColor="@color/black"
+                    app:cardElevation="-1dp"
+                    app:layout_constraintTop_toBottomOf="parent"
+                    android:layout_marginLeft="-140dp"
+                    app:cardCornerRadius="40dp"
+                    app:cardUseCompatPadding="true"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="2dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="선택 횟수"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:elevation="100dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/selectedBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:text=""
+                        android:layout_marginLeft="15dp"
+                        android:elevation="10dp"
+                        />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintTop_toBottomOf="@+id/foodPic"
+                tools:ignore="MissingConstraints">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/western_food"
+                    android:scaleType="centerCrop"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="90dp"
+                    android:alpha="0.1"
+                    />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="100dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="-140dp"
+                    android:layout_marginTop="-110dp"
+                    app:cardBackgroundColor="@color/black"
+                    app:cardCornerRadius="40dp"
+                    app:cardElevation="-1dp"
+                    app:cardUseCompatPadding="true" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginBottom="2dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:elevation="100dp"
+                        android:text="한줄 소개"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/comment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:elevation="10dp"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="90dp"
+        app:cardElevation="100dp"
+        tools:ignore="MissingConstraints"
+
+        >
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/recommendMimikyu"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/answer_mimikyu"
+            android:background="@color/invisible"
+            tools:ignore="SpeakableTextPresentCheck"
+            />
+
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
