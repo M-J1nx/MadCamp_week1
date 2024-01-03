@@ -182,7 +182,7 @@
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="260dp"
+        android:layout_marginBottom="255dp"
         android:layout_marginEnd="120dp">
      ></ImageView>
 
