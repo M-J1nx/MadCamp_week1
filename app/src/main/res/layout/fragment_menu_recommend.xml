@@ -99,33 +99,46 @@
                         app:layout_constraintStart_toStartOf="@+id/imageView2"
                         app:layout_constraintTop_toTopOf="parent">
 
+                        <ImageView
+                            android:layout_marginStart="-6dp"
+                            android:id="@+id/imageView3"
+                            android:layout_width="39dp"
+                            android:layout_height="39dp"
+                            android:background="@drawable/pokelogo2" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginStart="3dp"
                             android:elevation="10dp"
                             android:text="NO."
                             android:textColor="@color/white"
+                            android:fontFamily="@font/dunggeunmo"
                             android:textSize="20sp" />
 
                         <TextView
                             android:id="@+id/NoNumber"
                             android:layout_width="40dp"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
                             android:elevation="10dp"
                             android:text=""
                             android:textColor="@color/white"
-                            android:textSize="20sp" />
+                            android:textSize="20sp"
+                            android:fontFamily="@font/dunggeunmo"/>
 
                         <TextView
                             android:id="@+id/pickedMenu"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
                             android:layout_marginLeft="40dp"
                             android:elevation="10dp"
                             android:text=""
                             android:textColor="@color/white"
-                            android:textSize="20sp" />
+                            android:textSize="20sp"
+                            />
                     </LinearLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -180,7 +193,8 @@
                         android:textSize="15sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/typeRound"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
 
                     <TextView
                         android:id="@+id/textView"
@@ -193,7 +207,8 @@
                         app:layout_constraintBottom_toBottomOf="@+id/typeRound"
                         app:layout_constraintEnd_toEndOf="@+id/typeRound"
                         app:layout_constraintStart_toStartOf="@+id/typeRound"
-                        app:layout_constraintTop_toTopOf="@+id/typeRound" />
+                        app:layout_constraintTop_toTopOf="@+id/typeRound"
+                        android:fontFamily="@font/dunggeunmo"/>
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/typeRound"
@@ -258,6 +273,7 @@
                         android:layout_height="wrap_content"
                         android:elevation="100dp"
                         android:text="선택 횟수"
+                        android:fontFamily="@font/dunggeunmo"
                         android:textColor="@color/white"
                         android:textSize="15sp"
                         app:layout_constraintBottom_toBottomOf="@+id/selectRound"
@@ -348,7 +364,8 @@
                         android:textColor="@color/black"
                         android:textSize="15sp"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+                        app:layout_constraintTop_toBottomOf="@+id/cardView2"
+                        />
 
                     <TextView
                         android:id="@+id/textView2"
@@ -361,7 +378,8 @@
                         app:layout_constraintBottom_toBottomOf="@+id/cardView2"
                         app:layout_constraintEnd_toEndOf="@+id/cardView2"
                         app:layout_constraintStart_toStartOf="@+id/cardView2"
-                        app:layout_constraintTop_toTopOf="@+id/cardView2" />
+                        app:layout_constraintTop_toTopOf="@+id/cardView2"
+                        android:fontFamily="@font/dunggeunmo"/>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 

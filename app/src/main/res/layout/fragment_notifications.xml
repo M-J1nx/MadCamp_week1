@@ -8,6 +8,15 @@
     tools:context=".ui.notifications.NotificationsFragment"
     android:background="@drawable/mdpokemonbattletextbox">
 
+
+
+    <ImageView
+        android:layout_width="201dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="180dp"
+        android:background="@drawable/scenebar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"></ImageView>
     <com.example.madcampweek1.ui.notifications.FoodRoulette
         android:id="@+id/roulette"
         android:layout_width="wrap_content"
@@ -57,15 +66,15 @@
 
         <ImageView
             android:id="@+id/openPokeball"
-            android:layout_width="316dp"
-            android:layout_height="316dp"
+            android:layout_width="315dp"
+            android:layout_height="315dp"
             android:layout_gravity="center"
             android:src="@drawable/openpokeball"
             android:visibility="invisible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             tools:ignore="MissingConstraints" />
-
+      
         <TextView
             android:id="@+id/rotateResultTv"
             android:layout_width="wrap_content"
@@ -78,14 +87,12 @@
             android:shadowRadius="1"
             android:text=""
             android:textColor="@color/white"
-
-            android:textSize="30sp"
-
+            android:textSize="40sp"
             app:layout_constraintBottom_toBottomOf="@+id/openPokeball"
             app:layout_constraintEnd_toEndOf="@+id/openPokeball"
             app:layout_constraintStart_toStartOf="@+id/openPokeball"
             app:layout_constraintTop_toTopOf="@+id/openPokeball" />
-
+      
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
@@ -147,5 +154,58 @@
         app:layout_constraintHorizontal_bias="0.744"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <ImageView
+        android:id="@+id/popImg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@drawable/whiteout"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="182dp"></ImageView>
+
+    <ImageView
+        android:id="@+id/loadingback"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@drawable/whiteout"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"></ImageView>
+    <ImageView
+        android:id="@+id/loadingImg1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/loadpoke"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="255dp"
+        android:layout_marginEnd="120dp">
+     ></ImageView>
+
+    <ImageView
+        android:id="@+id/loadingImg2"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="250dp"
+        android:background="@drawable/loadpoke2"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"></ImageView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/loadingText"
+        android:text="Loading..."
+        android:textSize="40sp"
+        android:fontFamily="@font/dunggeunmo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="75dp"
+        android:layout_marginBottom="200dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

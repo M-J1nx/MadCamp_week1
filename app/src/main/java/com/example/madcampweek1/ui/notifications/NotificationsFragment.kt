@@ -32,6 +32,8 @@ class NotificationsFragment : Fragment() {
 
     private var _binding: FragmentNotificationsBinding? = null
     private  val iDuration: Long=800
+    private var doubleTap = false
+
 
 
     // This property is only valid between onCreateView and
@@ -61,6 +63,51 @@ class NotificationsFragment : Fragment() {
 //        }
         binding.rotateResultTv.bringToFront()
 
+
+
+        val handler = Handler()
+        val maxIterations = 12 // Number of times to toggle visibility
+
+        var iterationCount = 0
+        val delay = 300L // Delay in milliseconds
+
+        fun toggleVisibility(isImg1Visible: Boolean) {
+            if (iterationCount < maxIterations) {
+                if (isImg1Visible) {
+                    binding.loadingImg1.visibility = View.VISIBLE
+                    binding.loadingImg2.visibility = View.INVISIBLE
+                } else {
+                    binding.loadingImg1.visibility = View.INVISIBLE
+                    binding.loadingImg2.visibility = View.VISIBLE
+                }
+
+                handler.postDelayed({
+                    iterationCount++
+                    toggleVisibility(!isImg1Visible)
+                }, delay)
+        }
+        if (iterationCount==maxIterations){
+
+            binding.loadingImg1.visibility=View.GONE
+            binding.loadingImg2.visibility=View.GONE
+            binding.loadingback.visibility=View.GONE
+            binding.loadingText.visibility=View.GONE
+
+        }
+        }
+
+// Start the toggling process
+        toggleVisibility(true)
+
+
+
+
+
+
+
+
+
+
         val recommendButton: Button = root.findViewById(R.id.recommendButton)
         recommendButton.setOnClickListener {
 
@@ -87,14 +134,30 @@ class NotificationsFragment : Fragment() {
 
         val resetButton: Button = root.findViewById(R.id.resetButton)
         resetButton.setOnClickListener {
-            resetRoulette()
+            if (doubleTap) {
+                activity?.finish() // Finish the activity containing the fragment
+                // If you want to finish the app regardless of the activity, use:
+                // requireActivity().finishAffinity()
+            } else {
+                doubleTap = true
+                // Set a delay for the second tap (in milliseconds)
+                val delayMillis = 2000L // 2 seconds delay for the second tap
+                binding.roulette.rotateRoulette(0.0F, 1000, null)
+                binding.openPokeball.visibility= View.INVISIBLE
+                binding.rotateResultTv.text = ""
+
+                // Reset the doubleTap variable after the delay
+                Handler().postDelayed({ doubleTap = false }, delayMillis)
+            }
         }
+
 
         val additionalButton: Button = root.findViewById(R.id.additionalButton)
         additionalButton.setOnClickListener {
             // connectWebSite()
             printDialogue()
         }
+
 
         return root
     }
@@ -236,12 +299,32 @@ class NotificationsFragment : Fragment() {
                 binding.rotateResultTv.text = ""
                 binding.openPokeball.visibility= View.INVISIBLE
                 val animatorY: ValueAnimator = ObjectAnimator.ofFloat(binding.closePokeball, "translationY", -90f, 80f,-55f,60f,0f)
-                animatorY.duration = 900
+                animatorY.duration = 1000
                 animatorY.start()
+
+                val handler = Handler()
+                handler.postDelayed({
+                    // This code will be executed after a delay of 900 milliseconds
+                    binding.popImg.visibility = View.VISIBLE
+
+                    val animatorAlpha: ValueAnimator = ObjectAnimator.ofFloat(binding.popImg, View.ALPHA, 0f, 1f)
+                    animatorAlpha.duration = 180
+                    animatorAlpha.start()
+                }, 950)
+
             }
 
             override fun onRotateEnd(pickedCategory: String) {
+                val animatorAlpha: ValueAnimator = ObjectAnimator.ofFloat(binding.popImg, View.ALPHA, 1f, 0f)
+                animatorAlpha.duration = 150
+                animatorAlpha.start()
+                val handler = Handler()
+                handler.postDelayed({
+                    binding.popImg.visibility=View.GONE
+                }, 150)
+
                 binding.rotateResultTv.text = "$pickedCategory"
+
                 val bundle = Bundle()
                 bundle.putString("pickedCategory", pickedCategory)
                 fragment.arguments = bundle
@@ -249,12 +332,12 @@ class NotificationsFragment : Fragment() {
             }
         }
         val toDegrees = (2000..10000).random().toFloat()
-        binding.roulette.rotateRoulette(toDegrees, 1000, rotateListener)
+        binding.roulette.rotateRoulette(toDegrees, 1200, rotateListener)
     }
 
-    fun resetRoulette() {
-        binding.roulette.rotateRoulette(0.0F, 1000, null)
-        binding.openPokeball.visibility= View.INVISIBLE
-        binding.rotateResultTv.text = ""
-    }
+//    fun resetRoulette() {
+//        binding.roulette.rotateRoulette(0.0F, 1000, null)
+//        binding.openPokeball.visibility= View.INVISIBLE
+//        binding.rotateResultTv.text = ""
+//    }
 }
