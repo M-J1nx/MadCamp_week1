@@ -1,4 +1,3 @@
-![1000009680](https://github.com/M-J1nx/MadCamp_week1_PokeMenu/assets/104704651/d5c34b9b-530d-4d6b-9671-547df5f340c1)# 🥘PokéMenu
 
 # 🥘*PokéMenu*
 
