@@ -54,6 +54,7 @@ class MenuRecommendFragment : Fragment() {
         val pickedCategory = arguments?.getString("pickedCategory")
 
         getJson("Food.json", foodSet, pickedCategory)
+        updateData()
         updateUI()
         updatePic(picURL)
 
@@ -61,6 +62,10 @@ class MenuRecommendFragment : Fragment() {
         menuRecommend.setOnClickListener {
             // JSON 데이터 가져오기
             getJson("Food.json", foodSet, pickedCategory)
+            updateData()
+            Log.d("teststst","$foodSet")
+            var test = extractFoodName(foodSet.toString())
+            Log.d("ttttttttttttttttttttttttt","$test")
             updateUI()
             updatePic(picURL)
         }
@@ -104,11 +109,36 @@ class MenuRecommendFragment : Fragment() {
         return binding.root
     }
 
+    fun extractFoodName(jsonString: String): String? {
+        try {
+            val jsonObject = JSONObject(jsonString)
+            return jsonObject.getString("name")
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+        return null
+    }
+
     private fun updatePic(url: String) {
         Glide.with(requireContext())
             .load(url)
             .override(300, 200)
             .into(binding.foodPic)
+    }
+
+    private fun updateData() {
+        var newFood = arguments?.getString("addedFoodName")
+        var newCategory = arguments?.getString("pickedCategory")
+        var newComment = arguments?.getString("commentAdded")
+        var newIndex = arguments?.getInt("addedIndex")
+        var newUrl = arguments?.getString("newUrl")
+        //var newUrl = "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/204364595/original/86db6005cd51b4f60e71cca277f603a82cf5646a/draw-a-pixel-pokemon-battle-background.png"
+
+        newCategory?.let {
+            val newFoodSet = ArrayList<String>()
+            newFoodSet.add("{\"name\":\"$newFood\",\"select\":$newIndex,\"comment\":\"$newComment\",\"c\":\"$newCategory\",\"url\":\"$newUrl\"}")
+            foodSet.addAll(newFoodSet)
+        }
     }
 
     private fun putStar(time:Int) {
@@ -123,7 +153,9 @@ class MenuRecommendFragment : Fragment() {
     private fun updateUI() {
         //pick menu
         var pick = foodSet.random()
+        Log.d("zzzzzzzzzzzzzzzzzzzz","$pick")
         val resultList = convertJsonToList(pick)
+        Log.d("zzzzzzzzzzzzzzzzzzzz","$resultList")
         popOut(binding.pickedMenu)
 
         binding.NoNumber.text = resultList[1]
