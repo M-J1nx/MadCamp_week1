@@ -23,6 +23,7 @@ class NotificationsFragment : Fragment() {
 
     private var _binding: FragmentNotificationsBinding? = null
     private  val iDuration: Long=800
+    private var doubleTap = false
 
 
     // This property is only valid between onCreateView and
@@ -75,14 +76,30 @@ class NotificationsFragment : Fragment() {
 
         val resetButton: Button = root.findViewById(R.id.resetButton)
         resetButton.setOnClickListener {
-            resetRoulette()
+            if (doubleTap) {
+                activity?.finish() // Finish the activity containing the fragment
+                // If you want to finish the app regardless of the activity, use:
+                // requireActivity().finishAffinity()
+            } else {
+                doubleTap = true
+                // Set a delay for the second tap (in milliseconds)
+                val delayMillis = 2000L // 2 seconds delay for the second tap
+                binding.roulette.rotateRoulette(0.0F, 1000, null)
+                binding.openPokeball.visibility= View.INVISIBLE
+                binding.rotateResultTv.text = ""
+
+                // Reset the doubleTap variable after the delay
+                Handler().postDelayed({ doubleTap = false }, delayMillis)
+            }
         }
+
 
         val additionalButton: Button = root.findViewById(R.id.additionalButton)
         additionalButton.setOnClickListener {
             val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.pokemon.com/us"))
             startActivity(browserIntent)
         }
+
 
         return root
     }
@@ -128,9 +145,9 @@ class NotificationsFragment : Fragment() {
         binding.roulette.rotateRoulette(toDegrees, 1000, rotateListener)
     }
 
-    fun resetRoulette() {
-        binding.roulette.rotateRoulette(0.0F, 1000, null)
-        binding.openPokeball.visibility= View.INVISIBLE
-        binding.rotateResultTv.text = ""
-    }
+//    fun resetRoulette() {
+//        binding.roulette.rotateRoulette(0.0F, 1000, null)
+//        binding.openPokeball.visibility= View.INVISIBLE
+//        binding.rotateResultTv.text = ""
+//    }
 }

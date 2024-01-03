@@ -18,7 +18,8 @@
             android:layout_width="290dp"
             android:layout_height="38dp"
             android:text="Access Gallery"
-            android:layout_marginLeft="10dp"/>
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/dunggeunmo"/>
 
         <ImageButton
             android:id="@+id/get_image_btn2"
