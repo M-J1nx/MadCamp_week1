@@ -74,7 +74,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             tools:ignore="MissingConstraints" />
-
+      
         <TextView
             android:id="@+id/rotateResultTv"
             android:layout_width="wrap_content"
@@ -88,12 +88,11 @@
             android:text=""
             android:textColor="@color/white"
             android:textSize="40sp"
-
             app:layout_constraintBottom_toBottomOf="@+id/openPokeball"
             app:layout_constraintEnd_toEndOf="@+id/openPokeball"
             app:layout_constraintStart_toStartOf="@+id/openPokeball"
             app:layout_constraintTop_toTopOf="@+id/openPokeball" />
-
+      
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
@@ -208,10 +207,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginEnd="75dp"
         android:layout_marginBottom="200dp"/>
-
-
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,7 +12,6 @@
 
     <line
         android:width="3dp"
-        android:color="@color/black"
         android:dashWidth="10dp"
         android:dashGap="5dp" />
 </shape>
