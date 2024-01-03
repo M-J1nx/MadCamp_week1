@@ -26,6 +26,7 @@ class NotificationsFragment : Fragment() {
     private var doubleTap = false
 
 
+
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
@@ -49,6 +50,51 @@ class NotificationsFragment : Fragment() {
 //            textView.text = it
 //        }
         binding.rotateResultTv.bringToFront()
+
+
+
+        val handler = Handler()
+        val maxIterations = 12 // Number of times to toggle visibility
+
+        var iterationCount = 0
+        val delay = 300L // Delay in milliseconds
+
+        fun toggleVisibility(isImg1Visible: Boolean) {
+            if (iterationCount < maxIterations) {
+                if (isImg1Visible) {
+                    binding.loadingImg1.visibility = View.VISIBLE
+                    binding.loadingImg2.visibility = View.INVISIBLE
+                } else {
+                    binding.loadingImg1.visibility = View.INVISIBLE
+                    binding.loadingImg2.visibility = View.VISIBLE
+                }
+
+                handler.postDelayed({
+                    iterationCount++
+                    toggleVisibility(!isImg1Visible)
+                }, delay)
+        }
+        if (iterationCount==maxIterations){
+
+            binding.loadingImg1.visibility=View.GONE
+            binding.loadingImg2.visibility=View.GONE
+            binding.loadingback.visibility=View.GONE
+            binding.loadingText.visibility=View.GONE
+
+        }
+        }
+
+// Start the toggling process
+        toggleVisibility(true)
+
+
+
+
+
+
+
+
+
 
         val recommendButton: Button = root.findViewById(R.id.recommendButton)
         recommendButton.setOnClickListener {

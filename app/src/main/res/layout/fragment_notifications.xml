@@ -8,6 +8,8 @@
     tools:context=".ui.notifications.NotificationsFragment"
     android:background="@drawable/mdpokemonbattletextbox">
 
+
+
     <ImageView
         android:layout_width="201dp"
         android:layout_height="66dp"
@@ -162,6 +164,54 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="182dp"></ImageView>
+
+    <ImageView
+        android:id="@+id/loadingback"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@drawable/whiteout"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"></ImageView>
+    <ImageView
+        android:id="@+id/loadingImg1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/loadpoke"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="260dp"
+        android:layout_marginEnd="120dp">
+     ></ImageView>
+
+    <ImageView
+        android:id="@+id/loadingImg2"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="250dp"
+        android:background="@drawable/loadpoke2"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"></ImageView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/loadingText"
+        android:text="Loading..."
+        android:textSize="40sp"
+        android:fontFamily="@font/dunggeunmo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="75dp"
+        android:layout_marginBottom="200dp"/>
+
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
