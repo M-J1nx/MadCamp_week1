@@ -128,12 +128,32 @@ class NotificationsFragment : Fragment() {
                 binding.rotateResultTv.text = ""
                 binding.openPokeball.visibility= View.INVISIBLE
                 val animatorY: ValueAnimator = ObjectAnimator.ofFloat(binding.closePokeball, "translationY", -90f, 80f,-55f,60f,0f)
-                animatorY.duration = 900
+                animatorY.duration = 1000
                 animatorY.start()
+
+                val handler = Handler()
+                handler.postDelayed({
+                    // This code will be executed after a delay of 900 milliseconds
+                    binding.popImg.visibility = View.VISIBLE
+
+                    val animatorAlpha: ValueAnimator = ObjectAnimator.ofFloat(binding.popImg, View.ALPHA, 0f, 1f)
+                    animatorAlpha.duration = 180
+                    animatorAlpha.start()
+                }, 950)
+
             }
 
             override fun onRotateEnd(pickedCategory: String) {
+                val animatorAlpha: ValueAnimator = ObjectAnimator.ofFloat(binding.popImg, View.ALPHA, 1f, 0f)
+                animatorAlpha.duration = 150
+                animatorAlpha.start()
+                val handler = Handler()
+                handler.postDelayed({
+                    binding.popImg.visibility=View.GONE
+                }, 150)
+
                 binding.rotateResultTv.text = "$pickedCategory"
+
                 val bundle = Bundle()
                 bundle.putString("pickedCategory", pickedCategory)
                 fragment.arguments = bundle
@@ -142,7 +162,7 @@ class NotificationsFragment : Fragment() {
             }
         }
         val toDegrees = (2000..10000).random().toFloat()
-        binding.roulette.rotateRoulette(toDegrees, 1000, rotateListener)
+        binding.roulette.rotateRoulette(toDegrees, 1200, rotateListener)
     }
 
 //    fun resetRoulette() {

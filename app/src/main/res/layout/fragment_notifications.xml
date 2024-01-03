@@ -8,6 +8,13 @@
     tools:context=".ui.notifications.NotificationsFragment"
     android:background="@drawable/mdpokemonbattletextbox">
 
+    <ImageView
+        android:layout_width="201dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="180dp"
+        android:background="@drawable/scenebar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"></ImageView>
     <com.example.madcampweek1.ui.notifications.FoodRoulette
         android:id="@+id/roulette"
         android:layout_width="wrap_content"
@@ -145,6 +152,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.744"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/popImg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@drawable/whiteout"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="182dp"></ImageView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
